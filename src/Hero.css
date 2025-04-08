@@ -1,0 +1,26 @@
+.hero {
+  position: relative;
+  min-height: 80vh;
+  background: url('/public/images/fashiontotech.png') no-repeat center center;
+  background-size: contain;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.hero-content {
+  position: absolute;
+  bottom: 10%;      /* Adjust this value to push the text further down */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;      /* Ensure the text is visible on your background */
+  width: 40%;       /* Optional: constrain the width of the content */
+  padding: 1em;
+}
+
+/* Optional: add a subtle text shadow for better readability */
+.hero-content h1,
+.hero-content h2,
+.hero-content p {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
