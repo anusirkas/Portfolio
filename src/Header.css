@@ -1,53 +1,45 @@
-/* Header container */
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 6%;  /* Smaller padding for the header */
-    background-color: white;
-  }
-  
-  /* Logo styling */
-  .logo-container {
-    flex-shrink: 0;  /* Prevent logo from shrinking */
-  }
-  
-  .header-logo {
-    width: 12rem !important; /* Force it */
-    height: auto !important;
-    max-width: none; /* Prevent any max-width issues */
-  }
-  
-  /* Navigation styling */
-  .nav-links-container {
-    display: flex;
-    justify-content: flex-start;  /* Align links to the left */
-    flex-grow: 1;
-  }
-  
-  /* Ensure header navigation stays in one line */
-.header-nav .nav-links {
-    display: flex;
-    justify-content: flex-end; /* Aligns links to the right */
-    gap: 2rem; /* Space between links */
-    list-style: none;
-    padding: 0;
-    margin: 0;
+header {
+  position: sticky;       /* Makes the header fixed/sticky */
+  top: 0;
+  width: 100%;
+  background-color: #fff; /* Choose a light background for a clean look */
+  padding: 0.5em 1em;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  z-index: 1000;          /* Ensure it stays on top */
 }
 
-/* More specific header navigation styles */
-.header-nav a.nav-link {
-    color: #495e57;  /* Green color */
-    text-transform: uppercase;
-    font-weight: bold;
-    text-decoration: none;
+.content-fit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-
-.header-nav .nav-link:hover {
-    text-decoration: underline;
+.logo .nav-link {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
 }
 
-.header-nav a {
-    color: #495e57; /* Ensure green color */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5em;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  color: #007bff;
 }

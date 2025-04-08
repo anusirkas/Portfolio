@@ -1,15 +1,14 @@
 import React from "react";
+import './Footer.css';
 
-const Footer = () => (
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-);
+const Footer = () => {
+  return (
+    <footer>
+      <div className="footer-container">
+        <p>&copy; {new Date().getFullYear()} Anu Sirkas. All rights reserved.</p>
+      </div>
+    </footer>
+  );
+};
 
 export default Footer;

@@ -1,0 +1,54 @@
+.contact {
+    padding: 3em 1em;
+    background-color: #fafafa; /* subtle off-white */
+    text-align: center;
+  }
+  
+  .contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .contact h2 {
+    font-size: 2rem;
+    margin-bottom: 1em;
+  }
+  
+  /* Email Block */
+  .contact-info p {
+    margin: 0.5em 0;
+    font-size: 1.2rem;
+  }
+  
+  .contact-email {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Social Links Block */
+  .contact-socials {
+    margin-top: 2em;
+  }
+  
+  .contact-socials p {
+    font-size: 1.1rem;
+    margin-bottom: 0.5em;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    font-size: 2rem; /* Icon size */
+    margin-top: 0.5em;
+  }
+  
+  .social-icons a {
+    color: #007bff;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: #0056b3;
+  }
+  

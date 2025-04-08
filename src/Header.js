@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import './Header.css';
 
 const Header = () => {
   const location = useLocation();
@@ -7,16 +8,14 @@ const Header = () => {
 
   const handleScroll = (sectionId) => {
     if (location.pathname === "/") {
-      // ✅ Smooth scrolling with longer duration
       const section = document.getElementById(sectionId);
       if (section) {
         window.scrollTo({
-          top: section.offsetTop - 80, // Adjusted to prevent cutting off section
+          top: section.offsetTop - 80,
           behavior: "smooth",
         });
       }
     } else {
-      // ✅ Navigate first, then delay scrolling
       navigate("/");
       setTimeout(() => {
         const section = document.getElementById(sectionId);
@@ -26,19 +25,16 @@ const Header = () => {
             behavior: "smooth",
           });
         }
-      }, 800); // ✅ Increased delay to 800ms for smoother transition
+      }, 800);
     }
   };
 
   return (
     <header>
       <div className="content-fit">
-        {/* ✅ Keep "Get Some Peace" on the Left */}
         <div className="logo">
           <Link to="/" className="nav-link">Hey you</Link>
         </div>
-
-        {/* ✅ Keep Navigation Links on the Right */}
         <nav>
           <ul>
             <li>
