@@ -4,6 +4,7 @@ import { SiFigma, SiAdobecreativecloud } from 'react-icons/si';
 import { GiPencilBrush } from 'react-icons/gi';
 import './Skills.css';
 
+
 const skills = {
   frontend: [
     { name: 'HTML', icon: <FaHtml5 /> },
@@ -13,8 +14,6 @@ const skills = {
   ],
   tools: [
     { name: 'Version Control (Git & GitHub)', icon: <FaGitAlt /> },
-    // If you decide to include Bootstrap, add it here (or omit if you're not confident)
-    // { name: 'Bootstrap', icon: <YourBootstrapIcon /> },
   ],
   creative: [
     { name: 'Figma', icon: <SiFigma /> },

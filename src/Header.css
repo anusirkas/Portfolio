@@ -1,13 +1,14 @@
 header {
-  position: sticky;       /* Makes the header fixed/sticky */
+  position: fixed;   /* or fixed, if you prefer */
   top: 0;
   width: 100%;
-  background-color: #fff; /* Choose a light background for a clean look */
+  background-color: transparent; /* Make header background transparent */
   padding: 0.5em 1em;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  z-index: 1000;          /* Ensure it stays on top */
+  box-shadow: none;  /* Remove any drop-shadow if not needed */
+  z-index: 1000;     /* Ensure header stays above content */
 }
 
+/* Container for header content */
 .content-fit {
   display: flex;
   justify-content: space-between;
@@ -16,13 +17,17 @@ header {
   margin: 0 auto;
 }
 
+/* Logo link styling (specific to .logo) */
 .logo .nav-link {
   font-size: 1.2rem;
   font-weight: bold;
   color: #333;
   text-decoration: none;
+  /* Optional subtle text shadow */
+  text-shadow: 0 2px 5px rgba(255, 255, 255, 0.6);
 }
 
+/* Navigation list styling */
 nav ul {
   list-style: none;
   display: flex;
@@ -31,6 +36,7 @@ nav ul {
   padding: 0;
 }
 
+/* Styling for navigation links */
 .nav-link {
   background: none;
   border: none;
@@ -38,8 +44,12 @@ nav ul {
   color: #333;
   text-decoration: none;
   cursor: pointer;
+  transition: color 0.3s ease;
+  /* Optional subtle text shadow for better visibility */
+  text-shadow: 0 5px 6px rgba(255, 255, 255, 0.7);
 }
 
+/* Hover state for nav links */
 .nav-link:hover {
   color: #007bff;
 }

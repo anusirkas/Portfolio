@@ -33,7 +33,7 @@ const Header = () => {
     <header>
       <div className="content-fit">
         <div className="logo">
-          <Link to="/" className="nav-link">Hey you</Link>
+          <Link to="/" className="nav-link">Anu Sirkas</Link>
         </div>
         <nav>
           <ul>

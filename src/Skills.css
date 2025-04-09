@@ -1,48 +1,65 @@
 .skills {
-    padding: 2em 1em;
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  
-  .skills h2 {
-    margin-bottom: 1.5em;
-    font-size: 2rem;
-  }
-  
-  .skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2em;
-  }
-  
-  .skill-group {
-    flex: 1;
-    min-width: 250px;
-    max-width: 350px;
-  }
-  
-  .skill-group h3 {
-    margin-bottom: 1em;
-    font-size: 1.5rem;
-  }
-  
-  .skill-group ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .skill-group li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 0.75em;
-    font-size: 1.1rem;
-  }
-  
-  .skill-icon {
-    font-size: 1.5em;
-    margin-right: 0.5em;
-    color: #007bff;
-  }
-  
+  padding: 2em 1em;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  /* You can change the background color here (or add a pattern) to suit your design */
+  background-color: #2a2a2a;  /* Example: a darker background for contrast */
+  color: #fff;
+  position: relative;
+  box-shadow: 0 15px 12px -6px rgba(0, 0, 0, 0.3);
+}
+
+/*text-shadow: 1px 1px 3px rgba(16, 110, 4, 0.7);*/
+
+/* Wave Divider Styles */
+.wave-divider {
+  display: block;
+  width: 100%;
+  height: auto;          /* Increase height for a more dramatic wave */
+  margin-bottom: -50px;    /* Pull the Skills content upward to overlap with the wave */
+}
+
+/* Skills Section Content */
+.skills h2 {
+  /*margin-top: 2em; /* Add some top margin to push the title down, away from the wave */
+  margin-bottom: 1.5em;
+  font-size: 2rem;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+  padding-top: 1.5em;  /* Provide spacing from the wave divider, if needed */
+}
+
+.skill-group {
+  flex: 1;
+  min-width: 250px;
+  max-width: 350px;
+}
+
+.skill-group h3 {
+  margin-bottom: 1em;
+  font-size: 1.5rem;
+}
+
+.skill-group ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skill-group li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75em;
+  font-size: 1.1rem;
+}
+
+.skill-icon {
+  font-size: 1.5em;
+  margin-right: 0.5em;
+  color: #007bff;
+}
