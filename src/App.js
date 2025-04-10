@@ -36,7 +36,6 @@ function App() {
       <About />
       <WaveDivider />
       <Skills />
-      
       <Portfolio />
       <Contact />
       <Footer />
