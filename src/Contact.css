@@ -1,7 +1,7 @@
 .contact {
-  padding: 3em 1em;
+  padding: 6em 1em 3em;  /* Increase the top padding to 4em (or adjust as needed) */
   background: linear-gradient(135deg, #f5f5f5, #eaeaea);
-  text-align: left; /* Aligns text to the left */
+  text-align: left;  /* Will be overridden in responsive styles */
 }
 
 .contact-container {
@@ -26,7 +26,21 @@
   align-items: center;
 }
 
-/* Ensure the animation scales responsively */
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-left,
+  .contact-right {
+    text-align: center;
+  }
+}
+
+/* Ensure the animation scales responsively. Is it right? */
 .contact-right .lottie,
 .contact-right svg,
 .contact-right img {

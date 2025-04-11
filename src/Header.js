@@ -11,11 +11,12 @@ const Header = () => {
       const section = document.getElementById(sectionId);
       if (section) {
         window.scrollTo({
-          top: section.offsetTop - 80,
+          top: section.offsetTop - 80,  // Adjust offset as needed
           behavior: "smooth",
         });
       }
     } else {
+      // Navigate to home and then scroll after delay
       navigate("/");
       setTimeout(() => {
         const section = document.getElementById(sectionId);
@@ -33,15 +34,17 @@ const Header = () => {
     <header>
       <div className="content-fit">
         <div className="logo">
-          <Link to="/" className="nav-link">Anu Sirkas</Link>
+          <Link to="/" className="nav-link" onClick={() => handleScroll("hero")}>
+            Anu Sirkas
+          </Link>
         </div>
         <nav>
           <ul>
             <li>
-              <button className="nav-link" onClick={() => handleScroll("intro")}>About</button>
+              <button className="nav-link" onClick={() => handleScroll("about")}>About</button>
             </li>
             <li>
-              <Link to="/portfolio" className="nav-link">Portfolio</Link>
+              <button className="nav-link" onClick={() => handleScroll("portfolio")}>Portfolio</button>
             </li>
             <li>
               <button className="nav-link" onClick={() => handleScroll("contact")}>Contact</button>

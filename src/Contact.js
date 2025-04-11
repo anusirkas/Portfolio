@@ -19,14 +19,14 @@ const Contact = () => {
             <p>Or connect with me on:</p>
             <div className="social-icons">
               <a
-                href="https://www.linkedin.com/in/yourprofile"
+                href="https://www.linkedin.com/in/anu-sirkas/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FaLinkedin />
               </a>
               <a
-                href="https://github.com/yourusername"
+                href="https://github.com/anusirkas"
                 target="_blank"
                 rel="noopener noreferrer"
               >

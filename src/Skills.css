@@ -1,5 +1,5 @@
 .skills {
-  padding: 2em 1em;
+  padding: 1em 1em;
   width: 100%;
   margin: 0 auto;
   text-align: center;
@@ -10,19 +10,23 @@
   box-shadow: 0 15px 12px -6px rgba(0, 0, 0, 0.3);
 }
 
-/*text-shadow: 1px 1px 3px rgba(16, 110, 4, 0.7);*/
-
-/* Wave Divider Styles */
 .wave-divider {
   display: block;
   width: 100%;
-  height: auto;          /* Increase height for a more dramatic wave */
-  margin-bottom: -50px;    /* Pull the Skills content upward to overlap with the wave */
+  height: auto; /* Keep aspect ratio */
+  margin-bottom: -20px;    /* Pull the Skills content upward to overlap with the wave */
 }
+
+/* This rule applies only when the extra class 'shadow-wave' is present */
+.shadow-wave {
+  /* Use a drop-shadow filter for the SVG */
+  filter: drop-shadow(0 7px 7px rgba(0, 0, 0, 0.4));
+}
+
 
 /* Skills Section Content */
 .skills h2 {
-  /*margin-top: 2em; /* Add some top margin to push the title down, away from the wave */
+  /*margin-top: -0.05em;   Pull the title up */
   margin-bottom: 1.5em;
   font-size: 2rem;
 }
@@ -32,7 +36,8 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 2em;
-  padding-top: 1.5em;  /* Provide spacing from the wave divider, if needed */
+  padding-top: 0em;  /* or 0.1 */
+  /*margin-top: -1em;     Negative margin to pull content up */
 }
 
 .skill-group {

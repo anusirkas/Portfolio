@@ -16,7 +16,7 @@ const Hero = () => {
   });
 
   return (
-    <section className="hero">
+    <section id="hero" className="hero">
       <div className="hero-frame">
         <img 
           src="/images/fromfashiontotech11.png" 

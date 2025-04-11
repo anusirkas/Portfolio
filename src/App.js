@@ -15,9 +15,8 @@ AOS.init({
   once: true,
 });
 
-// Place the WaveDivider between About and Skills
-const WaveDivider = () => (
-  <svg viewBox="0 0 1440 320" className="wave-divider">
+const WaveDivider = ({ className = '' }) => (
+  <svg viewBox="0 0 1440 320" className={`wave-divider ${className}`}>
     <path fill="#2a2a2a" fillOpacity="1"
     d="M0,200 
          C120,50,360,350,480,200 
@@ -28,6 +27,7 @@ const WaveDivider = () => (
   </svg>
 );
 
+
 function App() {
   return (
     <div className="App">
@@ -37,6 +37,7 @@ function App() {
       <WaveDivider />
       <Skills />
       <Portfolio />
+      <WaveDivider className="shadow-wave" />
       <Contact />
       <Footer />
     </div>

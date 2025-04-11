@@ -1,9 +1,14 @@
-.about {
+  .about {
     padding: 3em 1em;
     background-color: #f5f5f5;
     text-align: center;
+    margin-bottom: -1em;  /* This pulls the next section up a bit */
   }
-  
+  @media (min-width: 1200px) {
+    .about {
+      padding: 2em 1em; /* Reduced vertical padding */
+    }
+  }
   .about-container {
     max-width: 800px;
     margin: 0 auto;

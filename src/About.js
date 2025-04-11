@@ -8,6 +8,9 @@ const About = () => {
         <div className="about-container">
           <h2>About Me</h2>
           <p>
+          Curious
+          Creative
+          and sometimes Cool
           I come from a background in fashion, where I designed knitwear and drew patterns.
           I love photography, dogs, and exploring diverse cultures after living in 5 countries.
           I'm on a mission to create visually stunning, user-friendly experiences.

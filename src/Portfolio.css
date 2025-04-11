@@ -53,3 +53,38 @@
     text-decoration: underline;
   }
   
+  .portfolio-categories {
+    text-align: center;
+    margin-bottom: 1.5em;
+  }
+  
+  .category-button {
+    background-color: #f0f0f0; /* A light gray that contrasts with off-white */
+    border: 1px solid rgba(126, 143, 161, 0.5); /* Use a semi-transparent border for a softer look */
+    border-radius: 20px;       /* Rounded corners */
+    padding: 0.5em 1em;
+    margin: 0 0.5em;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 1px 3px rgba(126, 143, 161, 0.3); /* A subtle box-shadow for a little depth */
+    outline: none;             /* Removes default button outline if any */
+  }
+
+  /* Custom focus style (for accessibility) */
+  .category-button:focus {
+    outline: 2px solid rgba(126, 143, 161, 0.5);
+    outline-offset: 4px;
+  }
+  
+  .category-button:hover {
+    background-color: #007bff; /* Use accent color on hover */
+    color: #fff;
+    transform: translateY(-2px);   /* A subtle lift effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .category-button.active {
+    background-color: #007bff; /* Active state same as hover */
+    color: #fff;
+  }
