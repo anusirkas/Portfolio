@@ -8,14 +8,6 @@ const About = () => {
         <div className="about-container">
           <h2>About Me</h2>
           <p>
-          Curious
-          Creative
-          and sometimes Cool
-          I come from a background in fashion, where I designed knitwear and drew patterns.
-          I love photography, dogs, and exploring diverse cultures after living in 5 countries.
-          I'm on a mission to create visually stunning, user-friendly experiences.
-          </p>
-          <p>
             I’m a junior Front-End Developer with a passion for technology and innovation, transitioning from a background in fashion design. With a Master’s in Textile Design and a Bachelor’s in Garment Technology, I spent years working in design and quality assurance, developing a keen sense of user-first thinking, problem-solving, and creativity. Now, I bring that same attention to detail and creativity to web development, combining technical skills with a strong design sensibility.
           </p>
           <p>
@@ -25,8 +17,7 @@ const About = () => {
             My international experiences—having lived in Thailand, Sweden, Germany, and the Netherlands—have shaped my adaptability and curiosity. I believe that great design and technology should serve people first, which is why I’m passionate about accessibility, intuitive UI, and building experiences that are both beautiful and functional. I’m currently enhancing my skills through online coding platforms (Odin Project, FreeCodeCamp) to build my portfolio, and looking for opportunities to collaborate on real-world projects where I can make an impact with both creativity and code.
           </p>
           <p>
-            🚀 Always learning. Always designing. Always coding.
-            Should I talk about my core values too? dont hurt others, let live and live yourself, sustainability !! make the world more united and happier place. 
+            🚀 Always learning. Always designing. Always coding. 
           </p>
 
           {/* Education / Journey Section */}
