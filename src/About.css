@@ -1,29 +1,44 @@
-  .about {
-    padding: 3em 1em;
-    background-color: #f5f5f5;
-    text-align: center;
-    margin-bottom: -1em;  /* This pulls the next section up a bit */
-  }
-  @media (min-width: 1200px) {
-    .about {
-      padding: 2em 1em; /* Reduced vertical padding */
-    }
-  }
-  .about-container {
-    max-width: 800px;
-    margin: 0 auto;
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #333;
-  }
-  
-  .about h2 {
-    font-size: 2rem;
-    margin-bottom: 1em;
-  }
-  
+.about {
+  padding: 3em 1em;
+  background-color: #f5f5f5;
+  text-align: center;
+   margin-bottom: -1em;  /* This pulls the next section up a bit */
+}
 
-  /* Education Section */
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+  
+/* Desktop adjustments using a media query */
+@media (min-width: 1200px) {
+  .about {
+    padding: 1em 1em;   /* Reduced vertical padding on large screens */
+    margin-bottom: -1.5em;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  .about {
+    padding: 0.5em 1em;  /* Adjust padding for smaller screens */
+    margin-bottom: 0;   /* Remove negative margin if it creates issues */
+  }
+
+  .about h2 {
+    margin-top: 0.2em;   /* Lower the top margin if needed */
+    margin-bottom: 0.5em;  /* Reduce bottom margin */
+    font-size: 1.5rem;   /* Scale down if it's too large on mobile */
+  }
+  /* You could also adjust other text elements if necessary */
+  .about p {
+    margin: 0.5em 0; /* Reduce paragraph margins */
+  }
+}
+
 .education {
     margin-top: 2em;
     text-align: left;
@@ -31,7 +46,7 @@
 
 
 .education h3 {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     margin-bottom: 1em;
     text-align: center;
 }
@@ -57,7 +72,7 @@
 }
 
 .education-info h4 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin: 0.5em 0;
 }
 

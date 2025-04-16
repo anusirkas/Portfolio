@@ -1,14 +1,14 @@
+/* Desktop styles */
 header {
-  position: fixed;   /* or fixed, if you prefer */
+  position: fixed;
   top: 0;
   width: 100%;
-  background-color: transparent; /* Make header background transparent */
+  background-color: transparent; /* Transparent background */
   padding: 0.5em 1em;
-  box-shadow: none;  /* Remove any drop-shadow if not needed */
-  z-index: 1000;     /* Ensure header stays above content */
+  box-shadow: none;
+  z-index: 1000; /* Ensure header stays on top */
 }
 
-/* Container for header content */
 .content-fit {
   display: flex;
   justify-content: space-between;
@@ -17,7 +17,6 @@ header {
   margin: 0 auto;
 }
 
-/* Logo link styling (specific to .logo) */
 .logo .nav-link {
   font-size: 1.2rem;
   font-weight: bold;
@@ -27,7 +26,7 @@ header {
   text-shadow: 0 2px 5px rgba(255, 255, 255, 0.6);
 }
 
-/* Navigation list styling */
+/* Desktop Nav Links */
 nav ul {
   list-style: none;
   display: flex;
@@ -36,7 +35,6 @@ nav ul {
   padding: 0;
 }
 
-/* Styling for navigation links */
 .nav-link {
   background: none;
   border: none;
@@ -49,7 +47,73 @@ nav ul {
   text-shadow: 0 5px 6px rgba(255, 255, 255, 0.7);
 }
 
-/* Hover state for nav links */
 .nav-link:hover {
   color: #007bff;
+}
+
+/* Hide hamburger by default on desktop */
+.hamburger {
+  display: none;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  /* Reassert fixed positioning on header for mobile */
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    /* You may adjust padding here if needed */
+  }
+
+  /* Position nav relatively so the hamburger can be absolutely positioned inside */
+  nav {
+    position: relative;
+  }
+
+  /* Mobile dropdown menu for nav links */
+  nav ul {
+    position: absolute;
+    top: 100%;      /* Positioned right under the header */
+    right: 0;
+    background-color: #f5f5f5;
+    flex-direction: column;
+    width: 200px;
+    padding: 1em;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    display: none;  /* Initially hidden */
+    border-radius: 10px;  /* Rounded corners */
+  }
+  
+  /* When menu is open, display the nav links */
+  nav ul.open {
+    display: flex;
+  }
+
+  /* Mobile Hamburger Button */
+  .hamburger {
+    display: block;
+    position: absolute;      /* Position relative to nav */
+    top: 50%;                /* Center vertically within the header */
+    right: 1em;              /* Start with 1em from the right edge */
+    transform: translateY(-50%) translateX(-0.7em); /* Nudge it to the left for alignment */
+    font-size: 2rem;
+    background: transparent; /* Transparent background */
+    border: none;            /* No border */
+    color: #333;
+    text-shadow: 0 5px 6px rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    padding: 0;              /* No extra padding */
+    z-index: 1100;           /* Ensure it's above other elements */
+  }
+}
+
+/* Desktop adjustments */
+@media (min-width: 769px) {
+  .nav-link {
+    /* Increase font size for desktop */
+    font-size: 1.2rem;
+    /* Increase the text shadow for better contrast */
+    text-shadow: 0 6px 8px rgba(255, 255, 255, 0.85);
+  }
 }

@@ -20,7 +20,7 @@
 .hero-img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   display: block;
 }
 
@@ -47,4 +47,33 @@
   font-size: 1.5em;
   margin: 0.5em 0;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+/* Styles for mobile devices (width <= 600px) */
+@media (max-width: 600px) {
+  .hero {
+    min-height: 60vh;  /* Less vertical space on small screens */
+    background-size: cover; /* Adjust if needed */
+    padding-bottom: 0em;  /* Reduced bottom padding */
+    margin-bottom: -8em;    /* Negative margin to pull the next section up */
+  }
+
+  .hero-content {
+    /* Optionally, reduce spacing within the content container */
+    margin-bottom: -0.5em;  /* This pulls the content closer to the bottom */
+  }
+
+  .hero-content h1,
+  .hero-content h2 {
+    margin: 0;  /* Remove default top and bottom margins */
+    padding: 0;
+  }
+
+  .hero-content h1 {
+    font-size: 2em;  /* Scale down the heading */
+  }
+
+  .hero-content h2 {
+    font-size: 1.2em;  /* Scale down the subheading */
+  }
 }

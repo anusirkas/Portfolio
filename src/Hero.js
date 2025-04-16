@@ -5,8 +5,8 @@ import './Hero.css';
 const Hero = () => {
   const [text] = useTypewriter({
     words: [
+      'Front-end developer',
       'Passionate about UX/UI design',
-      'Geek for understanding full stack',
       'Based in Tallinn, Estonia',
     ],
     typeSpeed: 50,
@@ -25,7 +25,7 @@ const Hero = () => {
         />
       </div>
       <div className="hero-content">
-        <h1>Hey, I am Anu, Front-End Developer</h1>
+        <h1>Hey, I am Anu</h1>
         <h2>
           {text}
           <Cursor />
