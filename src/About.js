@@ -8,17 +8,40 @@ const About = () => {
         <div className="about-container">
           <h2>About Me</h2>
           <p>
-            I’m a junior Front-End Developer with a passion for technology and innovation, transitioning from a background in fashion design. With a Master’s in Textile Design and a Bachelor’s in Garment Technology, I spent years working in design and quality assurance, developing a keen sense of user-first thinking, problem-solving, and creativity. Now, I bring that same attention to detail and creativity to web development, combining technical skills with a strong design sensibility.
+          I’m a junior Front‑End Developer with a passion for UX/UI design, transitioning from a decade in fashion and textile design. Armed with a Master’s in Textile Design and a Bachelor’s in Garment Technology, I spent years honing visual thinking, user‑first problem‑solving, and quality assurance—skills I now bring to the web.
           </p>
           <p>
-            After completing the Meta Front-End Developer Professional Certificate in March 2025, I’ve immersed myself in HTML, CSS, JavaScript, and React, focusing on creating seamless, accessible, and visually compelling digital experiences. My expertise in design tools like Adobe Creative Suite and Figma allows me to translate complex concepts into functional and engaging interfaces.
+          After earning the Meta Front‑End Developer Professional Certificate in March 2025, I dove deep into HTML, CSS, JavaScript, and React, crafting accessible, visually compelling interfaces. I lean on Figma and Adobe Creative Suite to translate complex ideas into intuitive layouts—and my curiosity drives me to explore back‑end technologies so I can bridge the gap between front and back.
           </p>
           <p>
-            My international experiences—having lived in Thailand, Sweden, Germany, and the Netherlands—have shaped my adaptability and curiosity. I believe that great design and technology should serve people first, which is why I’m passionate about accessibility, intuitive UI, and building experiences that are both beautiful and functional. I’m currently enhancing my skills through online coding platforms (Odin Project, FreeCodeCamp) to build my portfolio, and looking for opportunities to collaborate on real-world projects where I can make an impact with both creativity and code.
+          Having lived in Thailand, Sweden, Germany, and the Netherlands, I’ve learned to adapt quickly, collaborate across cultures, and appreciate new perspectives. I believe great tech serves people first, which is why I champion accessibility, clear UX flows, and thoughtful interactions.
           </p>
-          <p>
-            🚀 Always learning. Always designing. Always coding. 
-          </p>
+
+          {/* New Values Section */}
+          <div className="values">
+          <h3>What I Value</h3>
+          <ul>
+            <li>
+              <strong>Life–Work Balance & Health</strong><br/>
+              I deliver results on time—and I honor rest, exercise, and mental well‑being so I can bring my best self every day.
+            </li>
+            <li>
+              <strong>Growth & Creativity</strong><br/>
+              I’m driven to learn new tools, explore “what‑if” solutions, and iterate quickly in a culture that encourages experimentation.
+            </li>
+            <li>
+              <strong>Autonomy & Trust</strong><br/>
+              I thrive when empowered to own my work—and I help create a team culture built on trust and mutual support.
+            </li>
+            <li>
+              <strong>Empathy, Inclusion & Sustainability</strong><br/>
+              I build with respect for all people, planet, and future generations—making experiences welcoming, accessible, and low‑impact.
+            </li>
+          </ul>
+        </div>
+      
+
+
 
           {/* Education / Journey Section */}
           <div className="education">

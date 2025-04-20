@@ -39,6 +39,43 @@
   }
 }
 
+/* Values Section */
+.values {
+  margin: 2em auto;
+  max-width: 700px;
+  text-align: left;
+  max-width: 400px;
+}
+
+.values h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.75em;
+  text-align: center;
+  color: #333;
+}
+
+.values ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.values li {
+  position: relative;
+  padding-left: 1.5em;
+  margin-bottom: 0.75em;
+}
+
+.values li::before {
+  content: '✔';              /* you can use any emoji or icon */
+  position: absolute;
+  left: 0;
+  top: 0.1em;                /* tweak to vertically center */
+  color: #007bff;
+  font-size: 1rem;
+}
+
+
 .education {
     margin-top: 2em;
     text-align: left;
