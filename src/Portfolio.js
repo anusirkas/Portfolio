@@ -25,7 +25,7 @@ const projects = [
   {
     id: 3,
     title: '3D Space',
-    description: 'I learned how to make a 3D animated webpage with moving object. I used three.js, Vanilla JS and Vite framework. Updating Vercel link asap! It is actually looking way better.',
+    description: 'I learned how to make a 3D animated webpage with moving object. I used three.js, Vanilla JS and Vite framework.',
     imageUrl: '/images/3dspace.png',
     demoUrl: 'https://3d-space-beta.vercel.app/',
     githubUrl: 'https://github.com/anusirkas/3D-space',
@@ -43,7 +43,7 @@ const projects = [
   {
     id: 5,
     title: 'Kombucha Drinks',
-    description: 'Interactive Hero section for healthy drinks webshop made in Figma',
+    description: 'Interactive Hero section for fictional healthy drinks e-commerce shop made in Figma. Updating the case study very soon.',
     imageUrl: '/images/freshy.png',
     figmaUrl: 'https://www.figma.com/proto/49sBruaZKoTAve9GXSCQG1/Kombucha?node-id=16-27&starting-point-node-id=16%3A153&t=Fj76KqwW9SWxn9Eu-1',
     category: ['Creative'],
@@ -51,7 +51,7 @@ const projects = [
   {
     id: 6,
     title: 'Textile Designer Portfolio',
-    description: 'A portfolio page about my past career as textile designer just to give you a glimpse of my creativity. It was a great chapter and I will keep cherish it as my hobby but I want to move on from fashion to software development.',
+    description: 'A portfolio page about my past career as textile designer just to give you a glimpse of my creativity. User-first thinking, pattern drawing, hand sketching, Adobe Creative Suite and other garment production related software.',
     imageUrl: '/images/streamandrocks.png',
     demoUrl: 'https://anusirkas.wixsite.com/portfolio',
     category: ['Creative'],

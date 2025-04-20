@@ -22,20 +22,16 @@ const About = () => {
           <h3>What I Value</h3>
           <ul>
             <li>
-              <strong>Life–Work Balance & Health</strong><br/>
-              I deliver results on time—and I honor rest, exercise, and mental well‑being so I can bring my best self every day.
+              Life–Work Balance & Health
             </li>
             <li>
-              <strong>Growth & Creativity</strong><br/>
-              I’m driven to learn new tools, explore “what‑if” solutions, and iterate quickly in a culture that encourages experimentation.
+              Growth & Creativity
             </li>
             <li>
-              <strong>Autonomy & Trust</strong><br/>
-              I thrive when empowered to own my work—and I help create a team culture built on trust and mutual support.
+              Autonomy & Trust
             </li>
             <li>
-              <strong>Empathy, Inclusion & Sustainability</strong><br/>
-              I build with respect for all people, planet, and future generations—making experiences welcoming, accessible, and low‑impact.
+              Empathy, Inclusion & Sustainability
             </li>
           </ul>
         </div>

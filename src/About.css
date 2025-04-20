@@ -40,40 +40,50 @@
 }
 
 /* Values Section */
+/* container */
 .values {
   margin: 2em auto;
-  max-width: 700px;
-  text-align: left;
-  max-width: 400px;
+  max-width: 400px;     /* narrow list for readability */
+  text-align: center;
 }
 
+/* title */
 .values h3 {
+  text-align: center;
   font-size: 1.4rem;
   margin-bottom: 0.75em;
-  text-align: center;
   color: #333;
 }
 
+/* center the list itself */
 .values ul {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;    /* stack items vertically */
+  align-items: center;       /* center each row */
 }
 
+/* each item is a flex row, so icon + text stay together */
 .values li {
-  position: relative;
-  padding-left: 1.5em;
+  display: flex;
+  align-items: center;
   margin-bottom: 0.75em;
+  font-size: 1rem;
+  color: #333;
 }
 
+/* inline icon before the text */
 .values li::before {
-  content: '✔';              /* you can use any emoji or icon */
-  position: absolute;
-  left: 0;
-  top: 0.1em;                /* tweak to vertically center */
+  content: '✔';
+  margin-right: 0.5em;
   color: #007bff;
-  font-size: 1rem;
+  font-size: 1.2em;
+  line-height: 1;
 }
+
+
 
 
 .education {
