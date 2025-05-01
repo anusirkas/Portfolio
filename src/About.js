@@ -8,7 +8,7 @@ const About = () => {
         <div className="about-container">
           <h2>About Me</h2>
           <p>
-          I’m a junior Front‑End Developer with a passion for UX/UI design, transitioning from a decade in fashion and textile design. Armed with a Master’s in Textile Design and a Bachelor’s in Garment Technology, I spent years honing visual thinking, user‑first problem‑solving, and quality assurance—skills I now bring to the web.
+          I’m a junior Front‑End Developer with a passion for UX/UI design, transitioning from a decade in fashion design. Armed with a Master’s in Textile Design and a Bachelor’s in Garment Technology, I spent years honing visual thinking, user‑first problem‑solving, and quality assurance—skills I now bring to the web.
           </p>
           <p>
           After earning the Meta Front‑End Developer Professional Certificate in March 2025, I dove deep into HTML, CSS, JavaScript, and React, crafting accessible, visually compelling interfaces. I lean on Figma and Adobe Creative Suite to translate complex ideas into intuitive layouts—and my curiosity drives me to explore back‑end technologies so I can bridge the gap between front and back.
