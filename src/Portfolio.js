@@ -4,6 +4,33 @@ import './Portfolio.css';
 const projects = [
   {
     id: 1,
+    title: 'Mini Message Board',
+    description: 'A modern chat-style message board built with Node.js, Express, EJS, and MongoDB Atlas. Features include dark/light mode, emoji picker, dynamic avatars, and persistent storage. Deployed on Render.',
+    imageUrl: '/images/message-board.png',
+    demoUrl: 'https://mini-message-board-b2bg.onrender.com/',
+    githubUrl: 'https://github.com/anusirkas/mini-message-board',
+    category: ['Full-Stack'],
+  },
+  {
+    id: 2,
+    title: 'NomadHub Sign-Up Form',
+    description: 'A sign-up form for NomadHub, an imagined platform for digital nomads. Uses glassmorphism design, clean grid layout, and interactive hover states.',
+    imageUrl: '/images/signup-form.png',
+    demoUrl: 'https://anusirkas.github.io/signup-form/',
+    githubUrl: 'https://github.com/anusirkas/signup-form',
+    category: ['Front-End'],
+  },
+  {
+    id: 3,
+    title: 'Weather App',
+    description: 'Weather application built with Nuxt 3 + Vue 3. Fetches live data from OpenWeatherMap API, auto-detects user location, and adapts UI styling dynamically based on weather conditions.',
+    imageUrl: '/images/weather-app.png',
+    demoUrl: 'https://weather-app-flame-one.vercel.app/',
+    githubUrl: 'https://github.com/anusirkas/weather-app',
+    category: ['Front-End'],
+  },
+  {
+    id: 4,
     title: 'Little Lemon Restaurant Website',
     description: 'Little Lemon Website is a fictional website created as a part of the Meta Frontend Developer course.',
     imageUrl: '/images/restaurant chef B.jpg',
@@ -13,7 +40,7 @@ const projects = [
     category: ['Front-End', 'Creative'],
   },
   {
-    id: 2,
+    id: 5,
     title: 'Kombucha Drinks',
     description: 'Fictional kombucha e-commerce prototype featuring an interactive hero, low- & high-fidelity wireframes, and a full UI kit.',
     imageUrl: '/images/freshy.png',
@@ -22,8 +49,8 @@ const projects = [
     category: ['Creative'],
   },
   {
-    id: 3,
-    title: 'Get Some Peace',
+    id: 6,
+    title: 'Get Some Peace House Rent',
     description: 'I built a 3D animated website using Sketchfab models, Three.js for rendering, GSAP for animations, and GLTFLoader to load 3D models. Get Some Peace is a fictional house rent website.',
     imageUrl: '/images/modernhouse.png',
     demoUrl: 'https://getsomepeace.vercel.app/',
@@ -31,7 +58,7 @@ const projects = [
     category: ['Creative'],
   },
   {
-    id: 4,
+    id: 7,
     title: 'Flight Seat App',
     description: 'Flight seat planner built with React & TailwindCSS. Clean UI, flight selection, and seat recommendation logic.',
     imageUrl: '/images/flight.jpg',
@@ -40,7 +67,7 @@ const projects = [
     category: ['Front-End'],
   },
   {
-    id: 5,
+    id: 8,
     title: '3D Space',
     description: 'I learned how to make a 3D animated webpage with moving object. I used three.js, Vanilla JS and Vite framework.',
     imageUrl: '/images/3dspace.png',
@@ -49,7 +76,7 @@ const projects = [
     category: ['Front-End'],
   },
   {
-    id: 6,
+    id: 9,
     title: 'Textile Designer Portfolio',
     description: 'A portfolio page about my past career as textile designer to give you a glimpse of my creativity. User-first thinking, pattern drawing, hand sketching, Adobe Creative Suite and other garment production related software.',
     imageUrl: '/images/streamandrocks.png',
@@ -58,7 +85,8 @@ const projects = [
   },
 ];
 
-const categories = ['All', 'Front-End', 'Creative'];
+const categories = ['All', 'Front-End', 'Full-Stack', 'Creative'];
+
 
 const Portfolio = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
