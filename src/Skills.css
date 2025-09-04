@@ -27,45 +27,52 @@
 /* Skills Section Content */
 .skills h2 {
   /*margin-top: -0.05em;   Pull the title up */
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
   font-size: 2rem;
 }
 
 .skills-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 2em;
-  padding-top: 0em;  /* or 0.1 */
-  /*margin-top: -1em;     Negative margin to pull content up */
+  justify-content: flex-start; /* <-- pane grupid joonduma vasakust servast */
+  gap: 4em;                    /* suurem vahe kastide vahel */
+  max-width: 1200px;           /* kogu sektsioon kitsam */
+  margin: 0 auto;              /* keskele ekraani suhtes */
+  padding-left: 3em;           /* tõstab natuke paremale */
 }
+
 .skill-group {
   flex: 1;
-  min-width: 250px;
-  max-width: 350px;
+  min-width: 220px;
+  max-width: 300px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* kõik vasakule joondatud */
+  align-items: flex-start;  /* pealkiri ja list vasakule */
+  text-align: left;
 }
 
 .skill-group h3 {
-  margin-bottom: 0.5em; /* väiksem vahe kui enne */
-  font-size: 1.5rem;    /* hoiab suure pealkirja */
+  margin-bottom: 1.1em;
+  font-size: 1.5rem;
   font-weight: 700;
   color: #fff;
+  text-align: left;        /* hoiab täpselt listi kohal */
+  width: 100%;
 }
+
 
 .skill-group ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  line-height: 0.8rem;
 }
 
 .skill-group li {
   display: flex;
   align-items: center;
-  margin-bottom: 0.75em; /* hoiab endise spacingu */
-  font-size: 1.1rem;     /* hoiab endise suuruse */
+  margin-bottom: 1.5em; /* hoiab endise spacingu */
+  font-size: 1.05rem;     /* hoiab endise suuruse */
 }
 
 

@@ -1,140 +1,79 @@
-.about {
-  padding: 3em 1em;
-  background-color: #f5f5f5;
-  text-align: center;
-   margin-bottom: -1em;  /* This pulls the next section up a bit */
-}
-
 .about-container {
-  max-width: 800px;
+  max-width: 750px;   /* kitsam konteiner */
   margin: 0 auto;
+  color: #333;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* Intro tekst */
+.about-intro {
+  margin-bottom: 2.5em;
   font-size: 1rem;
-  line-height: 1.6;
-  color: #333;
-}
-  
-/* Desktop adjustments using a media query */
-@media (min-width: 1200px) {
-  .about {
-    padding: 1em 1em;   /* Reduced vertical padding on large screens */
-    margin-bottom: -1.5em;
-  }
+  line-height: 1.7;   /* õhulisem */
+  max-width: 700px;   /* veel kitsam */
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;   /* loetavam kui justified/center */
 }
 
-/* Mobile adjustments */
-@media (max-width: 600px) {
-  .about {
-    padding: 0.5em 1em;  /* Adjust padding for smaller screens */
-    margin-bottom: 0;   /* Remove negative margin if it creates issues */
-  }
-
-  .about h2 {
-    margin-top: 0.2em;   /* Lower the top margin if needed */
-    margin-bottom: 0.5em;  /* Reduce bottom margin */
-    font-size: 1.5rem;   /* Scale down if it's too large on mobile */
-  }
-  /* You could also adjust other text elements if necessary */
-  .about p {
-    margin: 0.5em 0; /* Reduce paragraph margins */
-  }
-}
-
-/* Values Section */
-/* container */
-.values {
+/* Spotlight Currently */
+.about-currently {
+  max-width: 700px;   /* kitsam kaart */
   margin: 2em auto;
-  max-width: 400px;     /* narrow list for readability */
+  padding: 2em;
+  background: linear-gradient(135deg, #e6f0ff, #ffffff);
+  border: 1px solid #dbe7ff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  text-align: left;
+  line-height: 1.7;
   text-align: center;
 }
 
-/* title */
-.values h3 {
+/* Education */
+.about-education {
+  max-width: 700px;   /* kitsam kaart */
+  margin: 2em auto;
+  padding: 2em;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   text-align: center;
-  font-size: 1.4rem;
-  margin-bottom: 0.75em;
-  color: #333;
+  line-height: 1.7;
 }
 
-/* center the list itself */
-.values ul {
+.about-strengths {
+  max-width: 700px;
+  margin: 2.5em auto 0 auto;
+  padding: 2em;
+  background: #f0f9ff;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.about-strengths h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1em;
+  color: #007bff;
+}
+
+.about-strengths ul {
   list-style: none;
   padding: 0;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;    /* stack items vertically */
-  align-items: center;       /* center each row */
-}
-
-/* each item is a flex row, so icon + text stay together */
-.values li {
-  display: flex;
-  align-items: center;
-  margin-bottom: 0.75em;
-  font-size: 1rem;
-  color: #333;
-}
-
-/* inline icon before the text */
-.values li::before {
-  content: '✔';
-  margin-right: 0.5em;
-  color: #007bff;
-  font-size: 1.2em;
-  line-height: 1;
-}
-
-
-
-
-.education {
-    margin-top: 2em;
-    text-align: left;
-}
-
-
-.education h3 {
-    font-size: 1.4rem;
-    margin-bottom: 1em;
-    text-align: center;
-}
-
-
-.education-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1em;
-  border-top: 1px solid #eee;
-  padding-top: 1em;
-}
-
-.education-badge {
-  max-width: 150px;
-  width: 100%;
-  height: auto;
-}
-
-.education-info {
+  display: inline-block; /* hoiab loendi keskel */
   text-align: center;
 }
 
-.education-info h4 {
-  font-size: 1.2rem;
-  margin: 0.5em 0;
+.about-strengths li {
+  margin: 0.8em 0;
+  font-size: 1rem;
 }
 
-.education-timeline {
-  font-style: italic;
-  color: #777;
-  margin: 0.5em 0;
-}
-
-.education-link {
+.about-strengths li::before {
+  content: '✔';
+  margin-right: 0.5em;
   color: #007bff;
-  text-decoration: none;
   font-weight: bold;
-}
-
-.education-link:hover {
-  color: #0056b3;
 }

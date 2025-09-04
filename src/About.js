@@ -3,72 +3,69 @@ import './About.css';
 
 const About = () => {
   return (
-    <>
-      <section id="about" className="about" data-aos="fade-up">
-        <div className="about-container">
-          <h2>About Me</h2>
+    <section id="about" className="about" data-aos="fade-up">
+      <div className="about-container">
+        <h2>About Me</h2>
+        <div className="about-intro">
           <p>
-          I’m a junior Front‑End Developer with a passion for UX/UI design, transitioning from a decade in fashion design. Armed with a Master’s in Textile Design and a Bachelor’s in Garment Technology, I spent years honing visual thinking, user‑first problem‑solving, and quality assurance—skills I now bring to the web.
+            I’m a Junior Front-End Developer passionate about building accessible and 
+            user-friendly digital products. With a background in fashion design, I bring a strong visual language, creativity, and empathy toward client needs — qualities I now apply to software development.
           </p>
           <p>
-          After earning the Meta Front‑End Developer Professional Certificate in March 2025, I dove deep into HTML, CSS, JavaScript, and React, crafting accessible, visually compelling interfaces. I lean on Figma and Adobe Creative Suite to translate complex ideas into intuitive layouts—and my curiosity drives me to explore back‑end technologies so I can bridge the gap between front and back.
+            I have contributed production-ready code in real client projects and collaborated effectively in agile teams. International experience across several countries has strengthened my adaptability, problem-solving, and cross-cultural communication.
           </p>
-          <p>
-          Having lived in Thailand, Sweden, Germany, and the Netherlands, I’ve learned to adapt quickly, collaborate across cultures, and appreciate new perspectives. I believe great tech serves people first, which is why I champion accessibility, clear UX flows, and thoughtful interactions.
-          </p>
-
-          {/* New Values Section */}
-          <div className="values">
-          <h3>What I Value</h3>
-          <ul>
-            <li>
-              Life–Work Balance & Health
-            </li>
-            <li>
-              Growth & Creativity
-            </li>
-            <li>
-              Autonomy & Trust
-            </li>
-            <li>
-              Empathy, Inclusion & Sustainability
-            </li>
-          </ul>
         </div>
-      
 
+        {/* Spotlight Currently */}
+        <div className="about-currently">
+          <h3>📍 Currently</h3>
+          <p>
+            Software Engineering Intern at <strong>Lumav Commerce</strong>, 
+            contributing to front-end development on large-scale Magento-based 
+            e-commerce projects.
+          </p>
+        </div>
 
-
-          {/* Education / Journey Section */}
-          <div className="education">
-            <h3>Education & Certifications</h3>
-            <div className="education-item">
-              <img 
-                src="/images/meta-front-end-developer-certificate.png" 
-                alt="Meta Front-End Developer Badge" 
-                className="education-badge" 
-              />
-              <div className="education-info">
-                <h4>Front-End Developer</h4>
-                <p>
-                  Earned the Meta Front-End Developer Professional Certificate through Coursera, 
-                  in partnership with Cerebrum Hub.
-                </p>
-                <p className="education-timeline">Nov 2024 - Mar 2025</p>
-                <a 
-                  className="education-link" 
-                  href="https://www.coursera.org/account/accomplishments/specialization/P2PJA2WX5LS4" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                >
-                  View Certificate
-                </a>
-              </div>
-            </div>
+        {/* Education */}
+        <div className="about-education">
+          <h3>🎓 Education & Certifications</h3>
+          <div className="education-mini">
+            <h4>Tallinn University of Technology (TalTech)</h4>
+            <p>External student – Web Technologies & Database Basics (12 ECTS)</p>
+            <p className="education-timeline">Sep 2025 – Jan 2026</p>
+          </div>
+          <div className="education-mini">
+            <h4>Cerebrum Hub / Coursera</h4>
+            <p>Front-End Developer</p>
+            <p className="education-timeline">Nov 2024 – Mar 2025</p>
+            <a 
+              className="education-link" 
+              href="https://www.coursera.org/account/accomplishments/specialization/P2PJA2WX5LS4" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              View Certificate
+            </a>
+          </div>
+          <div className="education-mini">
+            <h4>The Odin Project</h4>
+            <p>Full-Stack JavaScript Curriculum (self-paced)</p>
+            <p className="education-timeline">Mar 2025 – Present</p>
           </div>
         </div>
-      </section>
-    </>
+
+        {/* Core Strengths at bottom */}
+        <div className="about-strengths">
+          <h3>⚡ Core Strengths</h3>
+          <ul>
+            <li><strong>Empathy & Inclusion</strong> – seeing the human side in every solution.</li>
+            <li><strong>Creativity & Design Sense</strong> – building visually compelling, intuitive interfaces.</li>
+            <li><strong>Sustainability & Awareness</strong> – mindful of long-term impact and environment.</li>
+            <li><strong>Problem-Solving & Growth</strong> – learning fast and adapting to challenges.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
   );
 };
 

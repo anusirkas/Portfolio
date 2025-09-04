@@ -36,7 +36,7 @@ const skills = {
     { name: 'Git & GitHub', icon: <FaGitAlt /> },
     { name: 'Bitbucket', icon: <SiBitbucket /> },
     { name: 'Jira (Atlassian)', icon: <SiJirasoftware /> },
-    { name: 'Render & Vercel (Deployment)', icon: <SiRender /> },
+    { name: 'Render & Vercel', icon: <SiRender /> },
   ],
   creative: [
     { name: 'Figma', icon: <SiFigma /> },

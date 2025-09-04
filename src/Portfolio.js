@@ -55,7 +55,7 @@ const projects = [
     imageUrl: '/images/modernhouse.png',
     demoUrl: 'https://getsomepeace.vercel.app/',
     githubUrl: 'https://github.com/anusirkas/getsomepeace',
-    category: ['Creative'],
+    category: ['Creative', 'Front-End'],
   },
   {
     id: 7,
