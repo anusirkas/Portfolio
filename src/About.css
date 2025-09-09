@@ -7,15 +7,21 @@
 }
 
 /* Intro tekst */
+/* Intro tekst – nüüd kaardiga */
 .about-intro {
-  margin-bottom: 2.5em;
+  margin: 2em auto;
+  padding: 2em;
   font-size: 1rem;
-  line-height: 1.7;   /* õhulisem */
-  max-width: 700px;   /* veel kitsam */
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;   /* loetavam kui justified/center */
+  line-height: 1.7;
+  max-width: 700px;
+  background: linear-gradient(135deg, #ffffff, #f9fbff);
+  border: 1px solid #eaeaea;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-align: center;
+  color: #333;
 }
+
 
 /* Spotlight Currently */
 .about-currently {
@@ -76,4 +82,45 @@
   margin-right: 0.5em;
   color: #007bff;
   font-weight: bold;
+}
+/* Mobiilivaade */
+@media (max-width: 768px) {
+  .about-container {
+    padding: 0 1rem;   /* väike külgmine padding */
+  }
+
+  .about-intro,
+  .about-currently,
+  .about-education,
+  .about-strengths {
+    margin: 1.2em auto;    /* vähem spacingut mobiilis */
+    padding: 1.5em;        /* natuke kitsam kui desktopil */
+    max-width: 100%;       /* võtab kogu laiuse */
+    box-sizing: border-box; /* et padding ei nihutaks üle ekraani */
+    text-align: center;    /* hoiab sisu ilusti keskel */
+  }
+
+  .about-strengths ul {
+    display: block;   /* inline-block mobiilis võib jääda viltu */
+  }
+}
+.company-link {
+  color: #000000;
+  text-decoration: underline;
+  font-weight: 400;
+}
+
+.company-link:hover {
+  text-decoration: underline;
+  color: #007bff;
+}
+
+.education-link{
+  color: #000000;
+  text-decoration: underline;
+  font-weight: 400;
+}
+.education-link:hover {
+  text-decoration: underline;
+  color: #007bff;
 }

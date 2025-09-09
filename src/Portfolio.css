@@ -88,3 +88,51 @@
     background-color: #007bff; /* Active state same as hover */
     color: #fff;
   }
+
+  /* 📱 Mobiilivaade */
+@media (max-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;  /* ainult 1 veerg */
+    gap: 1em;                    /* väiksem vahe */
+  }
+
+  .portfolio-item {
+    max-width: 95%;              /* jätab veidi ruumi külgedele */
+    margin: 0 auto;              /* keskele */
+  }
+
+  .portfolio-item img {
+    height: 200px;               /* väiksem kõrgus mobiilis */
+  }
+
+  .portfolio-details {
+    text-align: center;          /* kõik detailid keskele */
+  }
+
+  .portfolio-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;     /* lingid keskele */
+    gap: 0.8em;                  /* väiksem vahe */
+  }
+
+  .portfolio-links a {
+    margin: 0;                   /* eemaldame parema marginaali */
+    padding: 0.4em 0.8em;        /* rohkem ruumi klikiks */
+    border: 1px solid #007bff;   /* raam, et näeks nuputena */
+    border-radius: 6px;
+  }
+  .portfolio-categories {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* kaks veergu */
+    gap: 0.8em;
+    justify-items: center; /* hoiab nupud keskel */
+    max-width: 400px;      /* kitsendab, et ei veniks üle */
+    margin: 0 auto 1.5em auto; /* keskele ja all vahe */
+  }
+
+  .category-button {
+    width: 100%;
+    text-align: center;
+  }
+}

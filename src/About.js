@@ -20,11 +20,19 @@ const About = () => {
         <div className="about-currently">
           <h3>📍 Currently</h3>
           <p>
-            Software Engineering Intern at <strong>Lumav Commerce</strong>, 
-            contributing to front-end development on large-scale Magento-based 
+            Software Engineering Intern at{" "}
+            <a 
+              href="https://www.lumav.ee/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="company-link"
+            >
+              <strong>Lumav Commerce</strong>
+            </a>, contributing to front-end development on large-scale Magento-based 
             e-commerce projects.
           </p>
         </div>
+
 
         {/* Education */}
         <div className="about-education">

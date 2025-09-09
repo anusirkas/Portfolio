@@ -81,3 +81,32 @@
   margin-right: 0.5em;
   color: #007bff;
 }
+
+/* 📱 Mobiilivaade */
+@media (max-width: 768px) {
+  .skills-container {
+    flex-direction: column;   /* kõik kastid alla üksteise */
+    align-items: center;      /* keskele */
+    padding-left: 0;          /* võtab vasaku offseti ära */
+    gap: 2em;                 /* väiksem vahe mobiilis */
+  }
+
+  .skill-group {
+    align-items: center;      /* pealkiri ja list keskele */
+    text-align: center;
+    max-width: 100%;          /* täislaius mobiilis */
+  }
+
+  .skill-group h3 {
+    text-align: center;       /* pealkiri keskele */
+  }
+
+  .skill-group li {
+    justify-content: center;  /* ikoon + nimi keskele */
+    font-size: 1rem;          /* natuke väiksem font mobiilis */
+  }
+
+  .skill-icon {
+    font-size: 1.3em;         /* väiksem ikoon mobiilis */
+  }
+}
