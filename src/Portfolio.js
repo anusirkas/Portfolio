@@ -31,6 +31,14 @@ const projects = [
   },
   {
     id: 4,
+    title: 'Auro - Luxury Fashion E-Commerce',
+    description: 'A minimalist and luxurious fictional shopping experience with React + Vite, modern CSS, and smooth UX animations. Inspired by modern luxury fashion brands (Prada, Acne Studios, Celine). Live Demo coming soon (Sept 2025)',
+    imageUrl: '/images/auro.png',
+    githubUrl: 'https://github.com/anusirkas/shopping-cart',
+    category: ['Front-End'],
+  },
+  {
+    id: 5,
     title: 'Little Lemon Restaurant Website',
     description: 'Little Lemon Website is a fictional website created as a part of the Meta Frontend Developer course.',
     imageUrl: '/images/restaurant chef B.jpg',
@@ -40,7 +48,7 @@ const projects = [
     category: ['Front-End', 'Creative'],
   },
   {
-    id: 5,
+    id: 6,
     title: 'Kombucha Drinks',
     description: 'Fictional kombucha e-commerce prototype featuring an interactive hero, low- & high-fidelity wireframes, and a full UI kit.',
     imageUrl: '/images/freshy.png',
@@ -49,7 +57,7 @@ const projects = [
     category: ['Creative'],
   },
   {
-    id: 6,
+    id: 7,
     title: 'Get Some Peace House Rent',
     description: 'I built a 3D animated website using Sketchfab models, Three.js for rendering, GSAP for animations, and GLTFLoader to load 3D models. Get Some Peace is a fictional house rent website.',
     imageUrl: '/images/modernhouse.png',
@@ -58,7 +66,7 @@ const projects = [
     category: ['Creative', 'Front-End'],
   },
   {
-    id: 7,
+    id: 8,
     title: 'Flight Seat App',
     description: 'Flight seat planner built with React & TailwindCSS. Clean UI, flight selection, and seat recommendation logic.',
     imageUrl: '/images/flight.jpg',
@@ -67,7 +75,7 @@ const projects = [
     category: ['Front-End'],
   },
   {
-    id: 8,
+    id: 9,
     title: '3D Space',
     description: 'I learned how to make a 3D animated webpage with moving object. I used three.js, Vanilla JS and Vite framework.',
     imageUrl: '/images/3dspace.png',
@@ -76,7 +84,7 @@ const projects = [
     category: ['Front-End'],
   },
   {
-    id: 9,
+    id: 10,
     title: 'Textile Designer Portfolio',
     description: 'A portfolio page about my past career as textile designer to give you a glimpse of my creativity. User-first thinking, pattern drawing, hand sketching, Adobe Creative Suite and other garment production related software.',
     imageUrl: '/images/streamandrocks.png',
