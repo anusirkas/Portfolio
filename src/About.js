@@ -8,11 +8,13 @@ const About = () => {
         <h2>About Me</h2>
         <div className="about-intro">
           <p>
-            I’m a Junior Front-End Developer passionate about building accessible and 
-            user-friendly digital products. With a background in fashion design, I bring a strong visual language, creativity, and empathy toward client needs — qualities I now apply to software development.
+            I’m a Front-End Developer with a passion for crafting accessible, user-friendly, and visually compelling digital products. My journey into tech is built on more than 10 years in the fashion and textile industry, where I developed a strong visual language, creativity, and an understanding of how design decisions impact the end user. Running my own knitwear brand also gave me hands-on experience in marketing across social media, print, TV, and live events — teaching me to think about design and communication from both the creative and business side.
           </p>
           <p>
-            I have contributed production-ready code in real client projects and collaborated effectively in agile teams. International experience across several countries has strengthened my adaptability, problem-solving, and cross-cultural communication.
+          After completing the Meta Front-End Developer Certificate, I deepened my skills in React, JavaScript, HTML, CSS, and UX/UI principles, and I continue to strengthen my full-stack knowledge with TypeScript, Vue, Nuxt, Node.js, GraphQL, and SCSS. To expand into backend development, I study Web Technologies (PHP, JavaScript, HTML, CSS) and Database Basics (MySQL) at TalTech. Currently, I am a Software Engineering Intern at Lumav Commerce, where I’ve contributed production-ready components to a large-scale e-commerce platform (60k+ products) that are now live.
+          </p>
+          <p>
+          Having lived and studied in Thailand, Sweden, Germany, and the Netherlands, I’ve built adaptability, problem-solving skills, and cross-cultural communication. What excites me most is bridging design sensibility and engineering to create products that not only work but feel intuitive, human, and enjoyable to use.
           </p>
         </div>
 

@@ -2,23 +2,23 @@ import React, { useState } from 'react';
 import './Portfolio.css';
 
 const projects = [
-  {
+    {
     id: 1,
+    title: 'Auro - Luxury Fashion E-Commerce',
+    description: 'A minimalist and luxurious fictional shopping experience with React + Vite, modern CSS, and smooth UX animations. Inspired by modern luxury fashion brands (Prada, Acne Studios, Celine). Work in progress (Sept 2025)',
+    imageUrl: '/images/auro.png',
+    demoUrl: 'https://auro-studio.vercel.app/',
+    githubUrl: 'https://github.com/anusirkas/shopping-cart',
+    category: ['Front-End'],
+  },
+  {
+    id: 2,
     title: 'Mini Message Board',
     description: 'A modern chat-style message board built with Node.js, Express, EJS, and MongoDB Atlas. Features include dark/light mode, emoji picker, dynamic avatars, and persistent storage. Deployed on Render.',
     imageUrl: '/images/message-board.png',
     demoUrl: 'https://mini-message-board-b2bg.onrender.com/',
     githubUrl: 'https://github.com/anusirkas/mini-message-board',
     category: ['Full-Stack'],
-  },
-  {
-    id: 2,
-    title: 'NomadHub Sign-Up Form',
-    description: 'A sign-up form for NomadHub, an imagined platform for digital nomads. Uses glassmorphism design, clean grid layout, and interactive hover states.',
-    imageUrl: '/images/signup-form.png',
-    demoUrl: 'https://anusirkas.github.io/signup-form/',
-    githubUrl: 'https://github.com/anusirkas/signup-form',
-    category: ['Front-End'],
   },
   {
     id: 3,
@@ -31,10 +31,11 @@ const projects = [
   },
   {
     id: 4,
-    title: 'Auro - Luxury Fashion E-Commerce',
-    description: 'A minimalist and luxurious fictional shopping experience with React + Vite, modern CSS, and smooth UX animations. Inspired by modern luxury fashion brands (Prada, Acne Studios, Celine). Live Demo coming soon (Sept 2025)',
-    imageUrl: '/images/auro.png',
-    githubUrl: 'https://github.com/anusirkas/shopping-cart',
+    title: 'NomadHub Sign-Up Form',
+    description: 'A sign-up form for NomadHub, an imagined platform for digital nomads. Uses glassmorphism design, clean grid layout, and interactive hover states.',
+    imageUrl: '/images/signup-form.png',
+    demoUrl: 'https://anusirkas.github.io/signup-form/',
+    githubUrl: 'https://github.com/anusirkas/signup-form',
     category: ['Front-End'],
   },
   {
