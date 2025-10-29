@@ -5,7 +5,7 @@ const projects = [
     {
     id: 1,
     title: 'Auro - Luxury Fashion E-Commerce',
-    description: 'A minimalist and luxurious fictional shopping experience with React + Vite, modern CSS, and smooth UX animations. Inspired by modern luxury fashion brands (Prada, Acne Studios, Celine). Work in progress (Sept 2025)',
+    description: 'A minimalist and luxurious fictional shopping experience with React + Vite, modern CSS, and smooth UX animations. Inspired by modern luxury fashion brands (Prada, Acne Studios, Celine). Work in progress.',
     imageUrl: '/images/auro.png',
     demoUrl: 'https://auro-studio.vercel.app/',
     githubUrl: 'https://github.com/anusirkas/shopping-cart',
