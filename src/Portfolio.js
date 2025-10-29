@@ -69,7 +69,7 @@ const projects = [
   {
     id: 8,
     title: 'Flight Seat App',
-    description: 'Flight seat planner built with React & TailwindCSS. Clean UI, flight selection, and seat recommendation logic.',
+    description: 'Flight seat planner built with React & TailwindCSS. Clean UI, flight selection, and seat recommendation logic. Work in progress',
     imageUrl: '/images/flight.jpg',
     demoUrl: 'https://flight-seat-app.vercel.app/',
     githubUrl: 'https://github.com/anusirkas/flight-seat-app',
