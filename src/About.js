@@ -8,13 +8,19 @@ const About = () => {
         <h2>About Me</h2>
         <div className="about-intro">
           <p>
-            I’m a junior Front-End Developer with a passion for crafting accessible, user-friendly, and visually compelling digital products. My journey into tech is built on more than 10 years in the fashion and textile industry, where I developed a strong visual language, creativity, and an understanding of how design decisions impact the end user. Running my own knitwear brand also gave me hands-on experience in marketing across social media, print, TV, and live events — teaching me to think about design and communication from both the creative and business side.
+            I’m a junior Software Engineer with a strong frontend and product focus, passionate about building accessible, user-friendly, and visually compelling digital products. I currently work as a software engineer, developing large-scale user-facing applications as well as internal tools, where I collaborate closely with designers, backend developers, and product teams.
           </p>
           <p>
-            After completing the Meta Front-End Developer Certificate, I deepened my skills in React, JavaScript, HTML, CSS, and UX/UI principles, and I continue to strengthen my software knowledge with TypeScript, Vue, Nuxt, Node.js, GraphQL, and SCSS. To expand into backend development, I study Web Technologies (PHP, JavaScript, HTML, CSS) and Database Basics (MySQL) at TalTech.
+            My journey into tech is built on more than 10 years in the fashion and textile industry, where I developed a strong visual language, creativity, and a deep understanding of how design decisions affect real users. Running my own knitwear brand also gave me hands-on experience in marketing and communication across social media, print, TV, and live events—shaping the way I approach products from both a creative and business perspective.
           </p>
           <p>
-            Having lived and studied in Thailand, Sweden, Germany, and the Netherlands, I’ve built adaptability, problem-solving skills, and cross-cultural communication. What excites me most is bridging design sensibility and engineering to create products that not only work but feel intuitive, human, and enjoyable to use.
+            In my day-to-day work, I use JavaScript and TypeScript with frameworks such as React and Vue, alongside HTML and CSS, to build scalable and maintainable interfaces. I also work with APIs and full-stack solutions using Node.js, and relational databases, while continuing to strengthen my skills through ongoing learning and real-world application.
+          </p>
+          <p>
+            My transition into software engineering began with structured front-end training at Cerebrum Hub, followed by academic studies in web technologies and databases at Tallinn University of Technology (TalTech). Today, alongside my professional work, I continue to deepen my skills through targeted, practice-oriented learning via Udemy.
+          </p>
+          <p>
+            Having lived and worked in Thailand, Sweden, Germany, and the Netherlands, I thrive in international environments and adapt quickly to new teams and cultures. What motivates me most is bridging visual sensibility and engineering - creating products that don’t just function correctly, but feel intuitive, thoughtful, and genuinely human to use.
           </p>
         </div>
 
@@ -22,7 +28,7 @@ const About = () => {
         <div className="about-currently">
           <h3>📍 Currently</h3>
           <p>
-            Software Engineering Intern at{" "}
+            Software Engineer at{" "}
             <a> <strong>Lumav Commerce</strong>
             </a>
           </p>
@@ -34,7 +40,9 @@ const About = () => {
           <h3>🎓 Education & Certifications</h3>
           <div className="education-mini">
             <h4>Tallinn University of Technology (TalTech)</h4>
-            <p>External student – Web Technologies & Database Basics (12 ECTS)</p>
+            <p>Web Technologies</p>
+            <p>Database Basics</p>
+            <p>External student (12 ECTS)</p>
             <p className="education-timeline">Sep 2025 – Jan 2026</p>
           </div>
           <div className="education-mini">
@@ -51,9 +59,11 @@ const About = () => {
             </a>
           </div>
           <div className="education-mini">
-            <h4>The Odin Project</h4>
-            <p>Full-Stack JavaScript Curriculum (self-paced)</p>
-            <p className="education-timeline">Mar 2025 – Present</p>
+            <h4>Udemy</h4>
+            <p>NodeJS - The Complete Guide</p>
+            <p>JavaScript - The Complete JavaScript Course</p>
+            <p>Figma UI UX Design Advanced</p>
+            <p className="education-timeline">Jan 2026 – Present</p>
           </div>
         </div>
 

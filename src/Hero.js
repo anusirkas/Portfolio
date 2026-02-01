@@ -5,8 +5,8 @@ import './Hero.css';
 const Hero = () => {
   const [text] = useTypewriter({
     words: [
-      'Front-end developer',
-      'Passionate about UX/UI design',
+      'Software developer',
+      'Building scalable web applications',
       'Based in Tallinn, Estonia',
     ],
     typeSpeed: 50,
