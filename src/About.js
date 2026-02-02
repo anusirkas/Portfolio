@@ -1,11 +1,47 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './About.css';
 
+gsap.registerPlugin(ScrollTrigger);
+
 const About = () => {
+  useEffect(() => {
+    // Timeline items animation
+    gsap.utils.toArray('.timeline-item').forEach((item, index) => {
+      gsap.from(item, {
+        opacity: 0,
+        x: index % 2 === 0 ? -50 : 50,
+        duration: 0.8,
+        delay: index * 0.15,
+        scrollTrigger: {
+          trigger: '.about-education',
+          start: 'top center',
+          markers: false,
+        },
+      });
+    });
+
+    // Card hover scale effect
+    const cards = gsap.utils.toArray('.glass-card');
+    cards.forEach(card => {
+      card.addEventListener('mouseenter', () => {
+        gsap.to(card, { scale: 1.05, duration: 0.3, ease: 'power2.out' });
+      });
+      card.addEventListener('mouseleave', () => {
+        gsap.to(card, { scale: 1, duration: 0.3, ease: 'power2.out' });
+      });
+    });
+
+    return () => {
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
+  }, []);
+
   return (
     <section id="about" className="about" data-aos="fade-up">
       <div className="about-container">
-        <h2>About Me</h2>
+        <h2 className="about-title">About Me</h2>
         <div className="about-intro">
           <p>
             I’m a junior Software Engineer with a strong frontend and product focus, passionate about building accessible, user-friendly, and visually compelling digital products. I currently work as a software engineer, developing large-scale user-facing applications as well as internal tools, where I collaborate closely with designers, backend developers, and product teams.
@@ -24,8 +60,8 @@ const About = () => {
           </p>
         </div>
 
-        {/* Spotlight Currently */}
-        <div className="about-currently">
+        {/* Spotlight Currently - Glassmorphism Card */}
+        <div className="glass-card about-currently">
           <h3>📍 Currently</h3>
           <p>
             Software Engineer at{" "}
@@ -34,40 +70,50 @@ const About = () => {
         </div>
 
 
-        {/* Education */}
+        {/* Education Timeline */}
         <div className="about-education">
           <h3>🎓 Education & Certifications</h3>
-          <div className="education-mini">
-            <h4>Tallinn University of Technology (TalTech)</h4>
-            <p>Web Technologies</p>
-            <p>Database Basics</p>
-            <p>External student (12 ECTS)</p>
-            <p className="education-timeline">Sep 2025 – Jan 2026</p>
-          </div>
-          <div className="education-mini">
-            <h4>Cerebrum Hub / Coursera</h4>
-            <p>Front-End Developer</p>
-            <p className="education-timeline">Nov 2024 – Mar 2025</p>
-            <a 
-              className="education-link" 
-              href="https://www.coursera.org/account/accomplishments/specialization/P2PJA2WX5LS4" 
-              target="_blank" 
-              rel="noopener noreferrer"
-            >
-              View Certificate
-            </a>
-          </div>
-          <div className="education-mini">
-            <h4>Udemy</h4>
-            <p>NodeJS - The Complete Guide</p>
-            <p>JavaScript - The Complete JavaScript Course</p>
-            <p>Figma UI UX Design Advanced</p>
-            <p className="education-timeline">Jan 2026 – Present</p>
+          <div className="timeline">
+            <div className="timeline-item timeline-left">
+              <div className="timeline-content">
+                <h4>Udemy</h4>
+                <p>NodeJS - The Complete Guide</p>
+                <p>JavaScript - The Complete JavaScript Course</p>
+                <p>Figma UI UX Design Advanced</p>
+                <p className="timeline-date">Jan 2026 – Present</p>
+              </div>
+            </div>
+
+            <div className="timeline-item timeline-right">
+              <div className="timeline-content">
+                <h4>Tallinn University of Technology (TalTech)</h4>
+                <p>Web Technologies</p>
+                <p>Database Basics</p>
+                <p>External student (12 ECTS)</p>
+                <p className="timeline-date">Sep 2025 – Jan 2026</p>
+              </div>
+            </div>
+
+            <div className="timeline-item timeline-left">
+              <div className="timeline-content">
+                <h4>Cerebrum Hub / Coursera</h4>
+                <p>Front-End Developer</p>
+                <p className="timeline-date">Nov 2024 – Mar 2025</p>
+                <a 
+                  className="timeline-link" 
+                  href="https://www.coursera.org/account/accomplishments/specialization/P2PJA2WX5LS4" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  View Certificate
+                </a>
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Core Strengths at bottom */}
-        <div className="about-strengths">
+        {/* Core Strengths - Glassmorphism Card */}
+        <div className="glass-card about-strengths">
           <h3>⚡ Core Strengths</h3>
           <ul>
             <li><strong>Empathy & Inclusion</strong> – seeing the human side in every solution.</li>
