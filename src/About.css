@@ -3,12 +3,12 @@
   margin: 0 auto;
   color: #333;
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 5rem;
   padding: 0 1rem;
 }
 
 .about-title {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: 700;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   -webkit-background-clip: text;
@@ -20,7 +20,7 @@
 
 /* Intro tekst */
 .about-intro {
-  margin: 2em auto;
+  margin: 0 auto 2em auto;
   padding: 2em;
   font-size: 1rem;
   line-height: 1.8;
@@ -131,7 +131,7 @@
 /* Education */
 .about-education {
   max-width: 100%;
-  margin: 3em auto;
+  margin: 5em auto;
   padding: 0;
   background: transparent;
   border: none;
@@ -140,7 +140,7 @@
 }
 
 .about-education h3 {
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   font-weight: 700;
   margin-bottom: 2.5em;
   color: #667eea;
@@ -292,7 +292,7 @@
 /* Core Strengths */
 .about-strengths {
   max-width: 900px;
-  margin: 2em auto 1em auto;
+  margin: 5em auto 1em auto;
   padding: 0;
   background: transparent;
   border: none;
@@ -321,7 +321,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 1.5em;
   width: 100%;
-  max-width: 600px;
+  max-width: 700px;
 }
 
 .about-strengths li {
@@ -329,13 +329,10 @@
   font-weight: 500;
   color: #333;
   transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-  padding: 0.8em 1.4em;
+  padding: 2em;
   background: rgba(255, 255, 255, 0.85);
   border: 1px solid rgba(102, 126, 234, 0.2);
   border-radius: 12px;
-  display: inline-block;
-  width: fit-content;
-  line-height: 1.6;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -343,11 +340,19 @@
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
 }
 
+.about-strengths li strong {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #667eea;
+  display: block;
+  margin-bottom: 0.8em;
+}
+
 .strength-desc {
-  font-size: 0.85rem;
-  color: #666;
+  font-size: 0.95rem;
+  color: #555;
   font-weight: 400;
-  margin-top: 0.4em;
+  line-height: 1.6;
 }
 
 .about-strengths li:hover {
@@ -473,5 +478,22 @@
 
   .timeline-item::before {
     left: -1.2em;
+  }
+
+  .about-strengths ul {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+
+  .about-strengths li {
+    padding: 1.2em;
+  }
+
+  .about-strengths li strong {
+    font-size: 1.1rem;
+  }
+
+  .strength-desc {
+    font-size: 0.85rem;
   }
 }

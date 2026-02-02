@@ -7,6 +7,11 @@
   .portfolio h2 {
     text-align: center;
     margin-bottom: 1.5em;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+    color: #667eea;
+    margin-top: 5rem;
   }
   
   .portfolio-grid {
