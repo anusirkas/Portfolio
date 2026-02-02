@@ -113,8 +113,8 @@ const About = () => {
           </div>
         </div>
 
-        {/* Core Strengths - Glassmorphism Card */}
-        <div className="glass-card about-strengths">
+        {/* Core Strengths */}
+        <div className="about-strengths">
           <h3>Core Strengths</h3>
           <ul>
             <li><strong>Empathy & Inclusion</strong><span className="strength-desc">seeing the human side in every solution.</span></li>
