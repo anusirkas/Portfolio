@@ -29,8 +29,7 @@ const About = () => {
           <h3>📍 Currently</h3>
           <p>
             Software Engineer at{" "}
-            <a> <strong>Lumav Commerce</strong>
-            </a>
+            <strong>Lumav Commerce</strong>
           </p>
         </div>
 
