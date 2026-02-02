@@ -29,7 +29,7 @@
   border: 1px solid #eaeaea;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  text-align: left;
+  text-align: justify;
   color: #333;
   transition: all 0.3s ease;
 }
@@ -96,6 +96,22 @@
 .about-currently {
   background: rgba(102, 126, 234, 0.05);
   border: 1px solid rgba(102, 126, 234, 0.2);
+}
+
+.about-currently p {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0.5em 0;
+}
+
+.about-currently .timeline-date {
+  font-size: 0.85rem;
+  color: #999;
+  font-weight: 600;
+  margin-top: 1em;
+  border-top: 1px solid rgba(102, 126, 234, 0.1);
+  padding-top: 0.8em;
+  text-align: center;
 }
 
 /* Spotlight Currently */
@@ -236,7 +252,7 @@
   text-align: inherit;
 }
 
-.timeline-date {
+.timeline-content .timeline-date {
   font-size: 0.85rem;
   color: #999;
   font-weight: 600;

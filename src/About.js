@@ -44,7 +44,7 @@ const About = () => {
         <h2 className="about-title">About Me</h2>
         <div className="about-intro">
           <p>
-            I’m a junior Software Engineer with a strong frontend and product focus, passionate about building accessible, user-friendly, and visually compelling digital products. I currently work as a software engineer, developing large-scale user-facing applications as well as internal tools, where I collaborate closely with designers, backend developers, and product teams.
+            I'm a junior Software Engineer with a strong frontend and product focus, passionate about building accessible, user-friendly, and visually compelling digital products. I currently work as a software engineer, developing large-scale user-facing applications as well as internal tools, where I collaborate closely with designers, backend developers, and product teams.
           </p>
           <p>
             My journey into tech is built on more than 10 years in the fashion and textile industry, where I developed a strong visual language, creativity, and a deep understanding of how design decisions affect real users. Running my own knitwear brand also gave me hands-on experience in marketing and communication across social media, print, TV, and live events—shaping the way I approach products from both a creative and business perspective.
@@ -56,23 +56,24 @@ const About = () => {
             My transition into software engineering began with structured front-end training at Cerebrum Hub, followed by academic studies in web technologies and databases at Tallinn University of Technology (TalTech). Today, alongside my professional work, I continue to deepen my skills through targeted, practice-oriented learning via Udemy.
           </p>
           <p>
-            Having lived and worked in Thailand, Sweden, Germany, and the Netherlands, I thrive in international environments and adapt quickly to new teams and cultures. What motivates me most is bridging visual sensibility and engineering - creating products that don’t just function correctly, but feel intuitive, thoughtful, and genuinely human to use.
+            Having lived and worked in Thailand, Sweden, Germany, and the Netherlands, I thrive in international environments and adapt quickly to new teams and cultures. What motivates me most is bridging visual sensibility and engineering - creating products that don't just function correctly, but feel intuitive, thoughtful, and genuinely human to use.
           </p>
         </div>
 
         {/* Spotlight Currently - Glassmorphism Card */}
         <div className="glass-card about-currently">
-          <h3>📍 Currently</h3>
+          <h3>Currently</h3>
           <p>
             Software Engineer at{" "}
             <strong>Lumav Commerce</strong>
           </p>
+          <p className="timeline-date">Jun 2025 – Present</p>
         </div>
 
 
         {/* Education Timeline */}
         <div className="about-education">
-          <h3>🎓 Education & Certifications</h3>
+          <h3>Education & Certifications</h3>
           <div className="timeline">
             <div className="timeline-item timeline-left">
               <div className="timeline-content">
@@ -114,7 +115,7 @@ const About = () => {
 
         {/* Core Strengths - Glassmorphism Card */}
         <div className="glass-card about-strengths">
-          <h3>⚡ Core Strengths</h3>
+          <h3>Core Strengths</h3>
           <ul>
             <li><strong>Empathy & Inclusion</strong> – seeing the human side in every solution.</li>
             <li><strong>Creativity & Design Sense</strong> – building visually compelling, intuitive interfaces.</li>
