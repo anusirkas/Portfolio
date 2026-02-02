@@ -117,10 +117,10 @@ const About = () => {
         <div className="glass-card about-strengths">
           <h3>Core Strengths</h3>
           <ul>
-            <li><strong>Empathy & Inclusion</strong> – seeing the human side in every solution.</li>
-            <li><strong>Creativity & Design Sense</strong> – building visually compelling, intuitive interfaces.</li>
-            <li><strong>Sustainability & Awareness</strong> – mindful of long-term impact and environment.</li>
-            <li><strong>Problem-Solving & Growth</strong> – learning fast and adapting to challenges.</li>
+            <li><strong>Empathy & Inclusion</strong><span className="strength-desc">seeing the human side in every solution.</span></li>
+            <li><strong>Creativity & Design Sense</strong><span className="strength-desc">building visually compelling, intuitive interfaces.</span></li>
+            <li><strong>Sustainability & Awareness</strong><span className="strength-desc">mindful of long-term impact and environment.</span></li>
+            <li><strong>Problem-Solving & Growth</strong><span className="strength-desc">learning fast and adapting to challenges.</span></li>
           </ul>
         </div>
       </div>
