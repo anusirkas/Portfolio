@@ -5,7 +5,7 @@ import {
 import { 
   SiFigma, SiAdobecreativecloud, SiMongodb, SiGraphql, SiTypescript, 
   SiNuxtdotjs, SiVuedotjs, SiMysql, SiPhp, SiBitbucket, SiJirasoftware,
-  SiRender, SiPhpstorm
+  SiRender, SiPhpstorm, SiMagento
 } from 'react-icons/si';
 import { FaNetworkWired, FaCode } from 'react-icons/fa';
 
@@ -39,6 +39,7 @@ const skills = {
     { name: 'Bitbucket', icon: <SiBitbucket /> },
     { name: 'Jira (Atlassian)', icon: <SiJirasoftware /> },
     { name: 'Render & Vercel', icon: <SiRender /> },
+    { name: 'Magento', icon: <SiMagento /> },
     { name: 'VS Code', icon: <FaCode /> },
     { name: 'Cursor', icon: <FaCode /> },
     { name: 'PhpStorm', icon: <SiPhpstorm /> },
