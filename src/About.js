@@ -47,7 +47,7 @@ const About = () => {
             I'm a junior Software Engineer with a strong frontend and product focus, passionate about building accessible, user-friendly, and visually compelling digital products. I currently work as a software engineer, developing large-scale user-facing applications as well as internal tools, where I collaborate closely with designers, backend developers, and product teams.
           </p>
           <p>
-            My journey into tech is built on more than 10 years in the fashion and textile industry, where I developed a strong visual language, creativity, and a deep understanding of how design decisions affect real users. Running my own knitwear brand also gave me hands-on experience in marketing and communication across social media, print, TV, and live events—shaping the way I approach products from both a creative and business perspective.
+            My journey into tech is built on more than 10 years in the fashion and textile industry, where I developed a strong visual language, creativity, and a deep understanding of how design decisions affect real users. Running my own knitwear brand also gave me hands-on experience in marketing and communication across social media, print, TV, and live events - shaping the way I approach products from both a creative and business perspective.
           </p>
           <p>
             In my day-to-day work, I use JavaScript and TypeScript with frameworks such as React and Vue, alongside HTML and CSS, to build scalable and maintainable interfaces. I also work with APIs and full-stack solutions using Node.js, and relational databases, while continuing to strengthen my skills through ongoing learning and real-world application.
