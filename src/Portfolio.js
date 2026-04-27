@@ -20,8 +20,26 @@ const projects = [
     githubUrl: 'https://github.com/anusirkas/mini-message-board',
     category: ['Full-Stack'],
   },
-  {
+    {
     id: 3,
+    title: 'Growth Mirror',
+    description: 'AI-inspired weekly reflection tool for junior builders and continuous learners. Built with React, TypeScript, and Vite to help users turn reflection into clarity and career momentum.',
+    imageUrl: '/images/growth-mirror-demo.png',
+    demoUrl: 'https://growth-mirror.vercel.app/',
+    githubUrl: 'https://github.com/anusirkas/growth-mirror',
+    category: ['Front-End'],
+  },
+  {
+    id: 4,
+    title: 'Quiz App',
+    description: 'Interactive quiz app built with React, TypeScript and Vite, featuring timed multiple-choice questions with real-time feedback, progress tracking and final results view. Includes Playwright E2E tests.',
+    imageUrl: '/images/question.png',
+    demoUrl: 'https://viktoriin-nu.vercel.app/',
+    githubUrl: 'https://github.com/anusirkas/viktoriin',
+    category: ['Front-End'],
+  },
+  {
+    id: 5,
     title: 'Weather App',
     description: 'Weather application built with Nuxt 3 + Vue 3. Fetches live data from OpenWeatherMap API, auto-detects user location, and adapts UI styling dynamically based on weather conditions.',
     imageUrl: '/images/weather-app.png',
@@ -30,7 +48,7 @@ const projects = [
     category: ['Front-End'],
   },
   {
-    id: 4,
+    id: 6,
     title: 'NomadHub Sign-Up Form',
     description: 'A sign-up form for NomadHub, an imagined platform for digital nomads. Uses glassmorphism design, clean grid layout, and interactive hover states.',
     imageUrl: '/images/signup-form.png',
@@ -39,7 +57,7 @@ const projects = [
     category: ['Front-End'],
   },
   {
-    id: 5,
+    id: 7,
     title: 'Little Lemon Restaurant Website',
     description: 'Little Lemon Website is a fictional website created as a part of the Meta Frontend Developer course.',
     imageUrl: '/images/restaurant chef B.jpg',
@@ -49,7 +67,7 @@ const projects = [
     category: ['Front-End', 'Creative'],
   },
   {
-    id: 6,
+    id: 8,
     title: 'Kombucha Drinks',
     description: 'Fictional kombucha e-commerce prototype featuring an interactive hero, low- & high-fidelity wireframes, and a full UI kit.',
     imageUrl: '/images/freshy.png',
@@ -58,7 +76,7 @@ const projects = [
     category: ['Creative'],
   },
   {
-    id: 7,
+    id: 9,
     title: 'Get Some Peace House Rent',
     description: 'I built a 3D animated website using Sketchfab models, Three.js for rendering, GSAP for animations, and GLTFLoader to load 3D models. Get Some Peace is a fictional house rent website.',
     imageUrl: '/images/modernhouse.png',
@@ -67,7 +85,7 @@ const projects = [
     category: ['Creative', 'Front-End'],
   },
   {
-    id: 8,
+    id: 10,
     title: 'Flight Seat App',
     description: 'Flight seat planner built with React & TailwindCSS. Clean UI, flight selection, and seat recommendation logic. Work in progress',
     imageUrl: '/images/flight.jpg',
@@ -76,7 +94,7 @@ const projects = [
     category: ['Front-End'],
   },
   {
-    id: 9,
+    id: 11,
     title: '3D Space',
     description: 'I learned how to make a 3D animated webpage with moving object. I used three.js, Vanilla JS and Vite framework.',
     imageUrl: '/images/3dspace.png',
@@ -85,7 +103,7 @@ const projects = [
     category: ['Front-End'],
   },
   {
-    id: 10,
+    id: 12,
     title: 'Textile Designer Portfolio',
     description: 'A portfolio page about my past career as textile designer to give you a glimpse of my creativity. User-first thinking, pattern drawing, hand sketching, Adobe Creative Suite and other garment production related software.',
     imageUrl: '/images/streamandrocks.png',
