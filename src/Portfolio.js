@@ -169,15 +169,24 @@ const Portfolio = () => {
   };
 
   useEffect(() => {
-    if (galleryImages) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
+    if (!galleryImages) return;
 
-    return () => {
-      document.body.style.overflow = "auto";
+    const handleKeyDown = (e) => {
+      if (e.key === "ArrowRight") {
+        setCurrentImageIndex((prev) => (prev === galleryImages.length - 1 ? 0 : prev + 1));
+      }
+
+      if (e.key === "ArrowLeft") {
+        setCurrentImageIndex((prev) => (prev === 0 ? galleryImages.length - 1 : prev - 1));
+      }
+
+      if (e.key === "Escape") {
+        setGalleryImages(null);
+      }
     };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
   }, [galleryImages]);
 
   const filteredProjects =
