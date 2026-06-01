@@ -147,6 +147,7 @@
     text-align: center;
   }
 }
+
 .gallery-modal {
   position: fixed;
   inset: 0;
@@ -157,30 +158,35 @@
   z-index: 9999;
   padding: 2rem;
 }
-
 .gallery-content {
+  max-width: 1100px;
+  width: 100%;
+  height: 90vh;
+  background: #111;
+  border-radius: 12px;
   position: relative;
-  max-width: 1000px;
-  width: 100%;
 }
-
-.gallery-content img {
-  width: 100%;
-  max-height: 80vh;
-  object-fit: contain;
+.gallery-image-wrapper {
+  height: calc(90vh - 120px);
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+  scroll-behavior: smooth;
 }
-
+.gallery-image {
+  width: 90%;
+  max-width: 950px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+}
 .gallery-nav {
-  position: absolute;
+  position: fixed;
   top: 50%;
   transform: translateY(-50%);
-  border: none;
-  background: rgba(255, 255, 255, 0.15);
-  color: white;
-  font-size: 2rem;
-  cursor: pointer;
-  padding: 0.75rem 1rem;
-  border-radius: 50%;
+  z-index: 10000;
 }
 
 .gallery-nav:hover {
@@ -188,15 +194,128 @@
 }
 
 .gallery-nav.prev {
-  left: -60px;
+  left: 40px;
 }
 
 .gallery-nav.next {
-  right: -60px;
+  right: 40px;
 }
 
 .gallery-counter {
   text-align: center;
   color: white;
   margin-top: 1rem;
+}
+.case-viewer {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+  overflow-y: auto; /* 🔥 THIS IS KEY */
+  padding: 3rem 1rem;
+}
+.case-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #111;
+  border-radius: 16px;
+  position: relative;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 80vh;
+}
+/* CLOSE */
+.case-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* MAIN AREA */
+.case-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 60vh;
+}
+
+/* IMAGE */
+.case-image-area {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.case-image {
+  width: 90%;
+  max-width: 900px;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* NAV */
+.case-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10000;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+.case-nav:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.case-nav.left {
+  left: 0;
+}
+
+.case-nav.right {
+  right: 0;
+}
+
+/* THUMBNAILS */
+.case-thumbs {
+  display: flex;
+  gap: 10px;
+  margin-top: 1rem;
+  overflow-x: auto;
+  padding: 0.5rem;
+}
+
+.case-thumb {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.case-thumb:hover {
+  opacity: 0.8;
+}
+
+.case-thumb.active {
+  opacity: 1;
+  outline: 2px solid white;
+}
+
+/* COUNTER */
+.case-counter {
+  text-align: center;
+  margin-top: 0.5rem;
+  color: #aaa;
+  font-size: 0.9rem;
 }

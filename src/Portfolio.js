@@ -169,24 +169,15 @@ const Portfolio = () => {
   };
 
   useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (!galleryImages) return;
+    if (galleryImages) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
 
-      if (e.key === "ArrowRight") {
-        setCurrentImageIndex((prev) => (prev === galleryImages.length - 1 ? 0 : prev + 1));
-      }
-
-      if (e.key === "ArrowLeft") {
-        setCurrentImageIndex((prev) => (prev === 0 ? galleryImages.length - 1 : prev - 1));
-      }
-
-      if (e.key === "Escape") {
-        setGalleryImages(null);
-      }
+    return () => {
+      document.body.style.overflow = "auto";
     };
-
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
   }, [galleryImages]);
 
   const filteredProjects =
@@ -258,23 +249,42 @@ const Portfolio = () => {
         ))}
       </div>
       {galleryImages && (
-        <div className="gallery-modal" onClick={() => setGalleryImages(null)}>
-          <div className="gallery-content" onClick={(e) => e.stopPropagation()}>
-            <button className="gallery-close" onClick={() => setGalleryImages(null)}>
+        <div className="case-viewer" onClick={() => setGalleryImages(null)}>
+          <div className="case-container" onClick={(e) => e.stopPropagation()}>
+            {/* CLOSE */}
+            <button className="case-close" onClick={() => setGalleryImages(null)}>
               ×
             </button>
 
-            <button className="gallery-nav prev" onClick={prevImage}>
-              ←
-            </button>
+            {/* MAIN VIEW */}
+            <div className="case-main">
+              <button className="case-nav left" onClick={prevImage}>
+                ←
+              </button>
 
-            <img src={galleryImages[currentImageIndex]} alt={`Screenshot ${currentImageIndex + 1}`} />
+              <div className="case-image-area">
+                <img src={galleryImages[currentImageIndex]} alt="" className="case-image" />
+              </div>
 
-            <button className="gallery-nav next" onClick={nextImage}>
-              →
-            </button>
+              <button className="case-nav right" onClick={nextImage}>
+                →
+              </button>
+            </div>
 
-            <div className="gallery-counter">
+            {/* THUMBNAILS */}
+            <div className="case-thumbs">
+              {galleryImages.map((img, index) => (
+                <img
+                  key={index}
+                  src={img}
+                  className={`case-thumb ${index === currentImageIndex ? "active" : ""}`}
+                  onClick={() => setCurrentImageIndex(index)}
+                />
+              ))}
+            </div>
+
+            {/* COUNTER */}
+            <div className="case-counter">
               {currentImageIndex + 1} / {galleryImages.length}
             </div>
           </div>
