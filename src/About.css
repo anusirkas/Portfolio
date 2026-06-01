@@ -39,7 +39,6 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
-
 /* ===== GLASSMORPHISM CARDS ===== */
 .glass-card {
   max-width: 700px;
@@ -59,7 +58,7 @@
 }
 
 .glass-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
@@ -116,13 +115,13 @@
 
 /* Spotlight Currently */
 .about-currently {
-  max-width: 700px;   /* kitsam kaart */
+  max-width: 700px; /* kitsam kaart */
   margin: 2em auto;
   padding: 2em;
   background: linear-gradient(135deg, #e6f0ff, #ffffff);
   border: 1px solid #dbe7ff;
   border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
   text-align: left;
   line-height: 1.7;
   text-align: center;
@@ -155,7 +154,7 @@
 
 /* Central line */
 .timeline::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -214,7 +213,7 @@
 
 /* Timeline dot */
 .timeline-item::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   top: 1.5em;
@@ -362,7 +361,7 @@
 }
 
 .about-strengths li::before {
-  content: '';
+  content: "";
   display: none;
 }
 
@@ -453,7 +452,23 @@
     transform: translateX(0);
   }
 }
+.about-quote {
+  margin-top: 10rem;
+  font-size: 1.35rem;
+  line-height: 1.6;
+  text-align: center;
 
+  color: #667eea;
+  font-weight: 500;
+
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-quote em {
+  font-style: italic;
+}
 @media (max-width: 480px) {
   .about-container {
     margin-top: 1rem;
