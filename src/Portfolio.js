@@ -242,15 +242,9 @@ const Portfolio = () => {
                   </a>
                 )}
                 {project.gallery && (
-                  <a
-                    href="#"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      openGallery(project.gallery);
-                    }}
-                  >
+                  <button className="case-link-button" onClick={() => openGallery(project.gallery)}>
                     Project Gallery
-                  </a>
+                  </button>
                 )}
               </div>
             </div>
@@ -286,6 +280,7 @@ const Portfolio = () => {
                 <img
                   key={index}
                   src={img}
+                  alt={`Screenshot ${index + 1}`}
                   className={`case-thumb ${index === currentImageIndex ? "active" : ""}`}
                   onClick={() => setCurrentImageIndex(index)}
                 />
