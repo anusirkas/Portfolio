@@ -5,7 +5,6 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import CaseStudy from "./pages/CaseStudy";
 import NotFound from "./pages/NotFound";
-import PaletteSwitcher from "./components/PaletteSwitcher";
 
 function useScrollOnNavigate() {
   const { pathname, hash, key } = useLocation();
@@ -52,7 +51,6 @@ export default function App() {
         </Routes>
       </main>
       <Footer />
-      {import.meta.env.DEV && <PaletteSwitcher />}
     </>
   );
 }

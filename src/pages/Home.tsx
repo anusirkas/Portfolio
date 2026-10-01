@@ -10,7 +10,7 @@ export default function Home() {
 
   return (
     <>
-      <section className="hero wrap">
+      <section id="top" className="hero wrap">
         <div className="hero-copy">
           <p className="eyebrow" data-reveal>Full-stack engineer · Tallinn</p>
           <h1 data-reveal>
@@ -101,8 +101,8 @@ export default function Home() {
               working on large e-commerce platforms with Vue, Nuxt, React, Next.js, Node.js and MariaDB.
             </p>
             <p>
-              I’m most interested in commerce and marketplace systems where product data, user experience and
-              sustainability meet.
+              What excites me most is <strong>fashion-tech</strong>: e-commerce, AI, 3D and sustainable fashion —
+              the places where product data, user experience and the way clothes are made meet.
             </p>
           </div>
           <ol className="timeline" data-reveal>
