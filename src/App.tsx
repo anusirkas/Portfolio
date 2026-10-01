@@ -5,16 +5,17 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import CaseStudy from "./pages/CaseStudy";
 import NotFound from "./pages/NotFound";
+import PaletteSwitcher from "./components/PaletteSwitcher";
 
 function useScrollOnNavigate() {
-  const { pathname, hash } = useLocation();
+  const { pathname, hash, key } = useLocation();
   useEffect(() => {
     if (hash) {
       document.getElementById(hash.slice(1))?.scrollIntoView({ behavior: "smooth" });
     } else {
       window.scrollTo(0, 0);
     }
-  }, [pathname, hash]);
+  }, [pathname, hash, key]);
 }
 
 function useReveal() {
@@ -51,6 +52,7 @@ export default function App() {
         </Routes>
       </main>
       <Footer />
+      {import.meta.env.DEV && <PaletteSwitcher />}
     </>
   );
 }

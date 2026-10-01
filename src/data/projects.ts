@@ -23,6 +23,7 @@ export type ArchiveProject = {
   year: string;
   stack: string;
   note: string;
+  image: string;
   links: Link[];
 };
 
@@ -175,6 +176,7 @@ export const featured: FeaturedProject[] = [
 export const archive: ArchiveProject[] = [
   {
     title: "Mini Message Board",
+    image: "/images/message-board.webp",
     year: "2026",
     stack: "Node.js · Express · EJS · MongoDB",
     note: "Chat-style board with dark mode, emoji picker and persistent storage",
@@ -185,6 +187,7 @@ export const archive: ArchiveProject[] = [
   },
   {
     title: "Quiz App",
+    image: "/images/quiz.webp",
     year: "2026",
     stack: "React · TypeScript · Playwright",
     note: "Timed multiple-choice quiz with feedback, progress and E2E tests",
@@ -195,6 +198,7 @@ export const archive: ArchiveProject[] = [
   },
   {
     title: "Weather App",
+    image: "/images/weather-app.webp",
     year: "2025",
     stack: "Nuxt 3 · Vue 3 · OpenWeatherMap",
     note: "Geolocation and condition-aware UI",
@@ -205,6 +209,7 @@ export const archive: ArchiveProject[] = [
   },
   {
     title: "Get Some Peace",
+    image: "/images/getsomepeace.webp",
     year: "2025",
     stack: "Three.js · GSAP · GLTF",
     note: "3D animated landing page for a fictional house rental",
@@ -215,6 +220,7 @@ export const archive: ArchiveProject[] = [
   },
   {
     title: "Flight Seat App",
+    image: "/images/flight.webp",
     year: "2025",
     stack: "React · Tailwind",
     note: "Flight selection and seat recommendation logic",
@@ -225,6 +231,7 @@ export const archive: ArchiveProject[] = [
   },
   {
     title: "Kombucha",
+    image: "/images/kombucha.webp",
     year: "2025",
     stack: "Figma",
     note: "E-commerce prototype with wireframes and UI kit",
@@ -237,6 +244,7 @@ export const archive: ArchiveProject[] = [
   },
   {
     title: "Little Lemon",
+    image: "/images/little-lemon.webp",
     year: "2025",
     stack: "React · Figma",
     note: "Restaurant site, Meta Front-End capstone",
@@ -247,6 +255,7 @@ export const archive: ArchiveProject[] = [
   },
   {
     title: "NomadHub Sign-up",
+    image: "/images/signup-form.webp",
     year: "2025",
     stack: "HTML · CSS",
     note: "Glassmorphism sign-up form",
@@ -257,6 +266,7 @@ export const archive: ArchiveProject[] = [
   },
   {
     title: "3D Space",
+    image: "/images/3d-space.webp",
     year: "2025",
     stack: "Three.js · Vite",
     note: "First steps in WebGL",
@@ -267,6 +277,7 @@ export const archive: ArchiveProject[] = [
   },
   {
     title: "Textile design portfolio",
+    image: "/images/textile-portfolio.webp",
     year: "Before tech",
     stack: "Pattern, sketching, Adobe CC",
     note: "My work as a textile designer",
@@ -276,7 +287,8 @@ export const archive: ArchiveProject[] = [
 
 export const timeline = [
   { when: "Jun 2025 – now", what: "Software Engineer, Lumav Commerce", detail: "Large-scale e-commerce: 10k+ product catalogues, component systems, internal tools, API integrations." },
-  { when: "Sep 2025 – Jan 2026", what: "TalTech — external studies", detail: "Web Technologies, Database Basics (12 ECTS)." },
+  { when: "Sep 2025 – Jan 2027", what: "TalTech — external studies", detail: "Web Technologies, Database Basics, Programming I (18 ECTS)." },
+  { when: "Oct 2025 – Sep 2026", what: "Udemy", detail: "Node.js, JavaScript, Figma UI/UX Design Advanced." },
   { when: "Nov 2024 – Mar 2025", what: "Meta Front-End Developer", detail: "Professional certificate via Coursera / Cerebrum Hub." },
   { when: "2021 – 2026", what: "Founder, anusirkas.ee", detail: "Zero-waste knitwear brand and WooCommerce store." },
   { when: "10+ years", what: "Fashion & textiles", detail: "Garment technologist, quality specialist, textile designer — Sweden, Thailand, Germany, the Netherlands." },
@@ -285,8 +297,8 @@ export const timeline = [
 
 export const toolbox = [
   { group: "Front-end", items: ["TypeScript", "React", "Next.js", "Vue", "Nuxt", "HTML & CSS"] },
-  { group: "Back-end & data", items: ["Node.js", "Express", "REST", "GraphQL", "MariaDB / MySQL", "PostgreSQL", "MongoDB", "PHP"] },
-  { group: "Commerce", items: ["Magento", "WooCommerce", "Product data", "Catalogue UX"] },
+  { group: "Back-end & data", items: ["Node.js", "Express", "REST", "GraphQL", "MariaDB / MySQL", "PostgreSQL", "MongoDB", "PHP", "Python"] },
+  { group: "Commerce", items: ["Magento", "WooCommerce", "GoERP", "Product data", "Catalogue UX"] },
   { group: "Tools & design", items: ["Git", "Jira", "Vercel", "Render", "Cursor", "Figma", "Adobe CC"] },
 ];
 

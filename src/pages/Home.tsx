@@ -1,8 +1,13 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import ArchiveList from "../components/ArchiveList";
+import ImageModal from "../components/ImageModal";
 import TechPack from "../components/TechPack";
 import { archive, contact, featured, timeline, toolbox } from "../data/projects";
 
 export default function Home() {
+  const [portraitOpen, setPortraitOpen] = useState(false);
+
   return (
     <>
       <section className="hero wrap">
@@ -17,7 +22,7 @@ export default function Home() {
           </p>
           <div className="hero-actions" data-reveal>
             <Link to="/#work" className="btn btn-primary">See selected work</Link>
-            <a href={`mailto:${contact.email}`} className="btn btn-ghost">Get in touch</a>
+            <Link to="/#contact" className="btn btn-ghost">Get in touch</Link>
           </div>
         </div>
         <div data-reveal>
@@ -66,23 +71,9 @@ export default function Home() {
           <h2 id="archive-title">More projects</h2>
           <p>Smaller builds and experiments along the way.</p>
         </div>
-        <ul className="archive" data-reveal>
-          {archive.map((a) => (
-            <li key={a.title}>
-              <span className="archive-year">{a.year}</span>
-              <span className="archive-title">
-                {a.title}
-                <span className="archive-note">{a.note}</span>
-              </span>
-              <span className="archive-stack">{a.stack}</span>
-              <span className="archive-links">
-                {a.links.map((l) => (
-                  <a key={l.href} href={l.href} target="_blank" rel="noreferrer">{l.label} ↗</a>
-                ))}
-              </span>
-            </li>
-          ))}
-        </ul>
+        <div data-reveal>
+          <ArchiveList items={archive} />
+        </div>
       </section>
 
       <section id="about" className="section wrap about">
@@ -91,6 +82,10 @@ export default function Home() {
         </div>
         <div className="about-grid">
           <div className="about-copy" data-reveal>
+            <button className="about-portrait" onClick={() => setPortraitOpen(true)} aria-label="Open illustration: from fashion to tech">
+              <img src="/images/fashion-to-tech.webp" alt="" loading="lazy" />
+              <span>From fashion to tech ↗</span>
+            </button>
             <p>
               For over a decade I worked in fashion as a garment technologist, quality specialist and textile designer
               across Sweden, Thailand, Germany and the Netherlands — and then ran my own zero-waste knitwear brand with
@@ -142,6 +137,15 @@ export default function Home() {
           <a href={contact.github} target="_blank" rel="noreferrer">GitHub ↗</a>
         </div>
       </section>
+
+      {portraitOpen && (
+        <ImageModal
+          src="/images/fashion-to-tech.webp"
+          alt="Illustration of Anu walking a mountain path from sewing tools and sketches towards a laptop with code"
+          caption="The path from fashion to tech."
+          onClose={() => setPortraitOpen(false)}
+        />
+      )}
     </>
   );
 }
