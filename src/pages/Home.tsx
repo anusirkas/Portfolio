@@ -30,6 +30,10 @@ export default function Home() {
         </div>
       </section>
 
+      <div className="wrap" aria-hidden="true">
+        <div className="knit-band" />
+      </div>
+
       <section id="work" className="section wrap">
         <div className="section-head" data-reveal>
           <h2>Selected work</h2>
@@ -126,10 +130,14 @@ export default function Home() {
         </div>
       </section>
 
+      <div className="wrap" aria-hidden="true">
+        <div className="knit-band" />
+      </div>
+
       <section id="contact" className="section wrap contact" data-reveal>
         <p className="eyebrow">Contact</p>
         <h2>
-          Let’s build something <em>well-made.</em>
+          Let’s build something <em>well‑made.</em>
         </h2>
         <a className="contact-email" href={`mailto:${contact.email}`}>{contact.email}</a>
         <div className="contact-links">

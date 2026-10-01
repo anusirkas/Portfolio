@@ -2,13 +2,14 @@ import { useState } from "react";
 
 /* Dev-only helper for choosing the site palette. Not rendered in production builds. */
 const palettes = [
-  { id: "cobalt", label: "Cobalt", swatch: "#2438e8" },
-  { id: "oxblood", label: "Oxblood", swatch: "#6e1423" },
-  { id: "emerald", label: "Emerald", swatch: "#0f7a4a" },
+  { id: "plum", label: "Plum", swatch: "#6b1d3c" },
+  { id: "raspberry", label: "Raspberry", swatch: "#b8245c" },
+  { id: "tomato", label: "Tomato", swatch: "#c8311f" },
+  { id: "marigold", label: "Marigold", swatch: "#ffc83d" },
 ];
 
 export default function PaletteSwitcher() {
-  const [current, setCurrent] = useState(document.documentElement.dataset.palette ?? "cobalt");
+  const [current, setCurrent] = useState(document.documentElement.dataset.palette ?? "plum");
 
   const pick = (id: string) => {
     document.documentElement.dataset.palette = id;

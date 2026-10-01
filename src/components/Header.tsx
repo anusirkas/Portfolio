@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
 type Theme = "light" | "dark";
@@ -12,9 +12,14 @@ function currentTheme(): Theme {
 export default function Header() {
   const [theme, setTheme] = useState<Theme>(currentTheme);
   const [scrolled, setScrolled] = useState(false);
+  const tapeRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8);
+    const onScroll = () => {
+      setScrolled(window.scrollY > 8);
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      tapeRef.current?.style.setProperty("--progress", String(max > 0 ? window.scrollY / max : 0));
+    };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -46,6 +51,7 @@ export default function Header() {
           </button>
         </nav>
       </div>
+      <div className="tape" ref={tapeRef} aria-hidden="true" />
     </header>
   );
 }
