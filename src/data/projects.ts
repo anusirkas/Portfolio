@@ -211,7 +211,7 @@ export const featured: FeaturedProject[] = [
       {
         heading: "Quality",
         body: [
-          "18 unit tests cover validation, parsing, the fallback and every branch of the request handler, with the model injected so tests never call Gemini. 16 Playwright tests run the app on desktop and mobile with the AI stubbed. CI runs both on every push.",
+          "18 unit tests cover validation, parsing, the fallback and every branch of the request handler, with the model injected so tests never call Gemini. 18 Playwright tests run the app on desktop and mobile with the AI stubbed. CI runs both on every push.",
         ],
       },
     ],
