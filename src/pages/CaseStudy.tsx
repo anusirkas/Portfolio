@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { featured } from "../data/projects";
 import NotFound from "./NotFound";
 
-const DEFAULT_TITLE = "Anu Sirkas — Full-stack engineer, e-commerce & fashion-tech";
+const DEFAULT_TITLE = "Anu Sirkas — Full-stack engineer";
 
 export default function CaseStudy() {
   const { slug } = useParams();

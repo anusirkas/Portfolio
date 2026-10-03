@@ -14,11 +14,12 @@ export default function Home() {
         <div className="hero-copy">
           <p className="eyebrow" data-reveal>Full-stack engineer · Tallinn</p>
           <h1 data-reveal>
-            I build <em>e-commerce</em> with a garment technologist’s eye for detail.
+            I build software the way good clothes are made: <em>well‑specified</em>, tested, made to last.
           </h1>
           <p className="lede" data-reveal>
-            I’m Anu Sirkas. I spent ten years making clothes and running a knitwear brand. Now I build the commerce
-            platforms that sell them — currently as a software engineer at Lumav Commerce.
+            I’m Anu Sirkas, a full-stack engineer at Lumav Commerce working with{" "}
+            <strong>TypeScript, Vue/Nuxt, React/Next.js, Node.js and PostgreSQL</strong>. Before that, ten years in garment
+            technology.
           </p>
           <div className="hero-actions" data-reveal>
             <Link to="/#work" className="btn btn-primary">See selected work</Link>
@@ -37,7 +38,7 @@ export default function Home() {
       <section id="work" className="section wrap">
         <div className="section-head" data-reveal>
           <h2>Selected work</h2>
-          <p>Commerce, product thinking and the fashion domain I come from.</p>
+          <p>Full-stack products, from data model to interface.</p>
         </div>
 
         <ol className="work-list">

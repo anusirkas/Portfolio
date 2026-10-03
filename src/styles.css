@@ -119,6 +119,8 @@ em {
   color: var(--accent);
   position: relative;
   z-index: 0;
+  /* the brush stroke is one shape, so emphasised words must not wrap */
+  white-space: nowrap;
 }
 /* hand-painted marigold brush stroke behind emphasised words */
 em::before {
@@ -1201,5 +1203,22 @@ body::after {
   .toolbox {
     grid-template-columns: 1fr 1fr;
     gap: 24px;
+  }
+}
+
+/* very narrow phones: keep the wordmark, nav and theme toggle on one line */
+@media (max-width: 420px) {
+  .wordmark {
+    font-stretch: 100%;
+    letter-spacing: 0.02em;
+    font-size: 13px;
+  }
+  .site-header nav {
+    gap: 10px;
+    font-size: 13px;
+  }
+  .theme-toggle {
+    width: 30px;
+    height: 30px;
   }
 }
