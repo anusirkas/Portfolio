@@ -1,6 +1,6 @@
 const rows: [string, string][] = [
   ["Style", "Full-stack engineer"],
-  ["Collection", "E-commerce systems"],
+  ["Collection", "Web apps · commerce · data"],
   ["Shell", "TypeScript · Vue · Nuxt · React · Next.js"],
   ["Lining", "Node.js · SQL · REST / GraphQL"],
   ["Trims", "Figma · product data · catalogue UX"],
