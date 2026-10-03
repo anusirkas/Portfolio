@@ -759,6 +759,33 @@ em::before {
   color: var(--ink-2);
   max-width: 40em;
 }
+.case-actions {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+  border-top: 1.5px dashed var(--line);
+}
+.case-actions li {
+  display: grid;
+  grid-template-columns: minmax(180px, 220px) 1fr;
+  gap: 4px 24px;
+  padding: 14px 0;
+  border-bottom: 1.5px dashed var(--line);
+}
+.case-actions a {
+  font-weight: 500;
+  text-underline-offset: 4px;
+  text-decoration-color: var(--accent);
+}
+.case-actions span {
+  color: var(--ink-2);
+  font-size: 16px;
+}
+@media (max-width: 640px) {
+  .case-actions li {
+    grid-template-columns: 1fr;
+  }
+}
 .gallery {
   margin-top: 48px;
 }

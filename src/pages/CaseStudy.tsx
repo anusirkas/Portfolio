@@ -73,6 +73,16 @@ export default function CaseStudy() {
               {s.body.map((p) => (
                 <p key={p.slice(0, 32)}>{p}</p>
               ))}
+              {s.actions && (
+                <ul className="case-actions">
+                  {s.actions.map((a) => (
+                    <li key={a.href + a.label}>
+                      <a href={a.href} target="_blank" rel="noreferrer">{a.label} ↗</a>
+                      <span>{a.hint}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
           </section>
         ))}

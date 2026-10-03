@@ -1,6 +1,11 @@
 export type Link = { label: string; href: string };
 
-export type CaseSection = { heading: string; body: string[] };
+export type CaseSection = {
+  heading: string;
+  body: string[];
+  /** Optional "try it" links shown under the paragraphs. */
+  actions?: { label: string; href: string; hint: string }[];
+};
 
 export type FeaturedProject = {
   slug: string;
@@ -43,48 +48,53 @@ export const featured: FeaturedProject[] = [
     imageAlt: "Auro shop grid with technical flat drawings of knitwear, a coat and a linen shirt",
     links: [
       { label: "Live demo", href: "https://auro-studio.vercel.app/" },
+      { label: "Back office demo", href: "https://auro-studio.vercel.app/admin" },
       { label: "Source", href: "https://github.com/anusirkas/shopping-cart" },
     ],
     sections: [
       {
-        heading: "The idea",
+        heading: "Why it matters",
         body: [
-          "Auro began as a luxury storefront inspired by Acne Studios, Prada and Celine. I rebuilt it as a full-stack store that uses what I learned in ten years of garment technology: how clothes are specified, sized and made.",
-          "Every product is a real record in Postgres: colourways, SKUs with stock, a size spec with finished garment measurements, and a passport describing where and how it was made.",
+          "Most fashion e-commerce treats clothes as pictures with a price. Auro treats them the way the industry makes them: as specified products with measurements, materials and a supply chain, and turns that knowledge into features shoppers can use.",
+          "It's a complete, working store, not a mock-up: a real database, real (test-mode) payments, an admin, automated tests and continuous deployment. It shows how I work: product thinking from ten years in garment technology, combined with full-stack engineering.",
+        ],
+      },
+      {
+        heading: "Try it yourself",
+        body: ["Everything is live and free to explore. Nothing you do can break it: demo changes reset every night."],
+        actions: [
+          { label: "Find your size", href: "https://auro-studio.vercel.app/product/pohja-coat", hint: "Open “Find my size” on a coat and enter your chest measurement." },
+          { label: "Read a product passport", href: "https://auro-studio.vercel.app/passport/AU-007-COA", hint: "Materials, every factory in the chain, care, repair and footprint." },
+          { label: "See the fabric in 3D", href: "https://auro-studio.vercel.app/product/vale-crew", hint: "Switch the product view to “3D fabric” and drag to rotate." },
+          { label: "Run the back office", href: "https://auro-studio.vercel.app/admin", hint: "Press “Try the back office”, change stock, then check the product page." },
+          { label: "Place a test order", href: "https://auro-studio.vercel.app/shop", hint: "Checkout with card 4242 4242 4242 4242, any future date and CVC." },
         ],
       },
       {
         heading: "Digital product passports",
         body: [
-          "The EU is introducing digital product passports for textiles. Each Auro product has one: fibre composition and origin, every stage of the supply chain from fibre to finishing, certifications, care, repair and end-of-life guidance, and an estimated footprint. A QR code links to it, as it would from a care label.",
+          "The EU is introducing digital product passports for textiles. Every Auro product already has one: fibre composition and origin, each stage of the supply chain, certifications, care, repair and end-of-life guidance, and an estimated footprint, linked by a QR code as it would be from a care label.",
         ],
       },
       {
-        heading: "A fit finder built on ease",
+        heading: "A fit finder built on garment ease",
         body: [
-          "Size advice usually compares body measurements with a size chart. Garment technologists think in ease: how much bigger than the body a garment is designed to be. A relaxed sweater has around 18 cm of room at the chest, a slim one about 4.",
-          "The fit finder compares your measurements with the finished garment and its intended ease, lets stretch knits go below zero ease while rigid wovens can't, weights waist above hip for trousers, and explains the result in plain language with a confidence level.",
+          "Size advice usually compares your measurements with a size chart. Garment technologists think in ease: how much bigger than the body a garment is designed to be. A relaxed sweater has around 18 cm of room at the chest, a slim one about 4.",
+          "The fit finder compares your measurements with the finished garment and its intended ease, allows stretch knits to be smaller than the body while rigid fabrics can't, and explains its recommendation in plain language with a confidence level.",
         ],
       },
       {
-        heading: "Fabric in 3D",
+        heading: "Drawn, not photographed",
         body: [
-          "Beside each flat, a React Three Fiber swatch hangs from a rail and drapes into folds. The yarn structure is drawn procedurally for each construction (stockinette loops, rib, twill diagonals, over-under weave, satin floats, canvas) and used as both colour and relief, wool gets a soft sheen, and the colour follows the chosen colourway. three.js only loads when someone opens the view.",
+          "Products are shown as technical flats, the line drawings sent to factories: 15 silhouettes in SVG, recoloured for every colourway and textured by how the fabric is made. Beside each flat, a 3D swatch drapes from a rail with a yarn structure generated for its construction, from knit loops to twill diagonals.",
         ],
       },
       {
-        heading: "Technical flats instead of photos",
+        heading: "Engineering",
         body: [
-          "Products are drawn as the line drawings sent to factories: 15 silhouettes in SVG with seams, ribs and buttons, recoloured for every colourway and textured by construction (knit, rib, twill, plain weave, satin, canvas). The whole catalogue looks consistent without a photo shoot.",
-        ],
-      },
-      {
-        heading: "Engineering decisions",
-        body: [
-          "Shop filters live in the URL, so every view is shareable, and each facet is counted with every other filter applied except its own, so options don't vanish while you choose.",
-          "The server never trusts the bag: checkout re-prices each line from the database and re-checks stock. A Stripe webhook marks orders paid and decrements stock with a conditional update, so two buyers can't oversell the last item, and repeated deliveries are ignored.",
-          "Payments run end to end in Stripe test mode: a paid order arrives through the webhook, is marked paid and takes stock from Postgres. An admin shows orders, sales and an inventory grid with low-stock highlighting. Visitors can open a demo session with one click and edit stock through Server Actions; a nightly cron restores seeded stock minus real sales, so experiments never leave the shop broken.",
-          "If the database is cold or unreachable, browsing falls back to a bundled catalogue while checkout refuses to trust it. Vitest covers the domain logic, 15 Playwright tests drive the built app on desktop and mobile, and both run with lint, type-checking and a production build on every push.",
+          "Next.js 16 and React 19 with TypeScript, PostgreSQL on Neon through Drizzle ORM, Stripe Checkout with a signed webhook, three.js for the fabric view, deployed on Vercel. 29 products and 352 SKUs with live stock.",
+          "The server re-prices and re-checks every order instead of trusting the browser, and stock is decremented with a conditional update so the last item can't be sold twice. Filters live in the URL so every view is shareable. If the database is unreachable, browsing falls back to bundled data while checkout refuses to.",
+          "22 unit tests and 15 end-to-end tests on desktop and mobile run with linting, type-checking and a production build on every push. The README on GitHub goes deeper into the architecture and trade-offs.",
         ],
       },
     ],
