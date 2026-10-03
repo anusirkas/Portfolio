@@ -17,9 +17,9 @@ export default function Home() {
             I build software the way good clothes are made: <em>well‑specified</em>, tested, made to last.
           </h1>
           <p className="lede" data-reveal>
-            I’m Anu Sirkas, a full-stack engineer at Lumav Commerce working with{" "}
-            <strong>TypeScript, Vue/Nuxt, React/Next.js, Node.js and PostgreSQL</strong>. Before that, ten years in garment
-            technology.
+            I’m Anu Sirkas, a full-stack engineer at Lumav Commerce. Across work and my own projects I build with{" "}
+            <strong>TypeScript, Vue/Nuxt, React/Next.js, Node.js and SQL databases</strong> (MariaDB, PostgreSQL). Before
+            that, ten years in garment technology.
           </p>
           <div className="hero-actions" data-reveal>
             <Link to="/#work" className="btn btn-primary">See selected work</Link>
