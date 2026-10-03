@@ -35,10 +35,10 @@ export const featured: FeaturedProject[] = [
     title: "Auro",
     kicker: "Full-stack fashion-tech store",
     summary:
-      "A Next.js and Postgres store where garment-technology knowledge becomes product features: digital product passports, a measurement-based fit finder and technical flats instead of photos.",
+      "A Next.js and Postgres store where garment-technology knowledge becomes product features: digital product passports, a fit finder built on garment ease, technical flats and 3D fabric, with Stripe checkout and an admin.",
     year: "2025–26",
     role: "Product, design & full-stack development",
-    stack: ["Next.js 16", "React 19", "TypeScript", "PostgreSQL (Neon)", "Drizzle ORM", "Stripe", "Vitest", "Playwright", "GitHub Actions"],
+    stack: ["Next.js 16", "React 19", "TypeScript", "PostgreSQL (Neon)", "Drizzle ORM", "Stripe", "three.js", "Vitest", "Playwright", "GitHub Actions"],
     image: "/images/auro-shop.webp",
     imageAlt: "Auro shop grid with technical flat drawings of knitwear, a coat and a linen shirt",
     links: [
@@ -67,6 +67,12 @@ export const featured: FeaturedProject[] = [
         ],
       },
       {
+        heading: "Fabric in 3D",
+        body: [
+          "Beside each flat, a React Three Fiber swatch hangs from a rail and drapes into folds. The yarn structure is drawn procedurally for each construction (stockinette loops, rib, twill diagonals, over-under weave, satin floats, canvas) and used as both colour and relief, wool gets a soft sheen, and the colour follows the chosen colourway. three.js only loads when someone opens the view.",
+        ],
+      },
+      {
         heading: "Technical flats instead of photos",
         body: [
           "Products are drawn as the line drawings sent to factories: 15 silhouettes in SVG with seams, ribs and buttons, recoloured for every colourway and textured by construction (knit, rib, twill, plain weave, satin, canvas). The whole catalogue looks consistent without a photo shoot.",
@@ -77,11 +83,20 @@ export const featured: FeaturedProject[] = [
         body: [
           "Shop filters live in the URL, so every view is shareable, and each facet is counted with every other filter applied except its own, so options don't vanish while you choose.",
           "The server never trusts the bag: checkout re-prices each line from the database and re-checks stock. A Stripe webhook marks orders paid and decrements stock with a conditional update, so two buyers can't oversell the last item, and repeated deliveries are ignored.",
-          "Without a database the store falls back to a bundled catalogue, so the demo stays up on free tiers. The domain logic has Vitest unit tests and runs through lint, type-checking and a production build on every push.",
+          "Payments run end to end in Stripe test mode: a paid order arrives through the webhook, is marked paid and takes stock from Postgres. An admin shows orders, sales and an inventory grid with low-stock highlighting; anyone can view it read-only, and editing goes through Server Actions behind a signed session.",
+          "If the database is cold or unreachable, browsing falls back to a bundled catalogue while checkout refuses to trust it. Vitest covers the domain logic, 15 Playwright tests drive the built app on desktop and mobile, and both run with lint, type-checking and a production build on every push.",
         ],
       },
     ],
-    gallery: ["/images/auro-home.webp", "/images/auro-shop.webp", "/images/auro-product-fit-finder.webp", "/images/auro-passport.webp", "/images/auro-stores.webp"],
+    gallery: [
+      "/images/auro-home.webp",
+      "/images/auro-shop.webp",
+      "/images/auro-product-fit-finder.webp",
+      "/images/auro-product-3d-fabric.webp",
+      "/images/auro-passport.webp",
+      "/images/auro-admin.webp",
+      "/images/auro-stores.webp",
+    ],
     galleryShape: "landscape",
   },
   {
