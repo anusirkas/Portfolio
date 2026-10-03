@@ -83,7 +83,7 @@ export const featured: FeaturedProject[] = [
         body: [
           "Shop filters live in the URL, so every view is shareable, and each facet is counted with every other filter applied except its own, so options don't vanish while you choose.",
           "The server never trusts the bag: checkout re-prices each line from the database and re-checks stock. A Stripe webhook marks orders paid and decrements stock with a conditional update, so two buyers can't oversell the last item, and repeated deliveries are ignored.",
-          "Payments run end to end in Stripe test mode: a paid order arrives through the webhook, is marked paid and takes stock from Postgres. An admin shows orders, sales and an inventory grid with low-stock highlighting; anyone can view it read-only, and editing goes through Server Actions behind a signed session.",
+          "Payments run end to end in Stripe test mode: a paid order arrives through the webhook, is marked paid and takes stock from Postgres. An admin shows orders, sales and an inventory grid with low-stock highlighting. Visitors can open a demo session with one click and edit stock through Server Actions; a nightly cron restores seeded stock minus real sales, so experiments never leave the shop broken.",
           "If the database is cold or unreachable, browsing falls back to a bundled catalogue while checkout refuses to trust it. Vitest covers the domain logic, 15 Playwright tests drive the built app on desktop and mobile, and both run with lint, type-checking and a production build on every push.",
         ],
       },
