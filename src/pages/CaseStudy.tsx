@@ -81,7 +81,7 @@ export default function CaseStudy() {
       {project.gallery && (
         <section className="gallery" aria-label="Screenshots" data-reveal>
           <h2>Screens</h2>
-          <div className="gallery-grid">
+          <div className={`gallery-grid${project.galleryShape === "landscape" ? " is-landscape" : ""}`}>
             {project.gallery.map((src, i) => (
               <button key={src} onClick={() => setOpen(i)} aria-label={`Open screenshot ${i + 1}`}>
                 <img src={src} alt="" loading="lazy" />

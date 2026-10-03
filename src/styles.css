@@ -787,6 +787,9 @@ em::before {
   object-position: top;
   transition: transform 0.5s;
 }
+.gallery-grid.is-landscape button {
+  aspect-ratio: 16 / 10;
+}
 .gallery-grid button:hover img {
   transform: scale(1.04);
 }

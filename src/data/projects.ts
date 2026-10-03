@@ -16,6 +16,8 @@ export type FeaturedProject = {
   status?: string;
   sections: CaseSection[];
   gallery?: string[];
+  /** Screenshot tiles: tall page captures (portrait) or browser-sized shots (landscape). */
+  galleryShape?: "portrait" | "landscape";
 };
 
 export type ArchiveProject = {
@@ -31,40 +33,56 @@ export const featured: FeaturedProject[] = [
   {
     slug: "auro",
     title: "Auro",
-    kicker: "Luxury fashion e-commerce",
+    kicker: "Full-stack fashion-tech store",
     summary:
-      "A minimalist luxury storefront inspired by Acne Studios, Prada and Celine — routing, cart state, motion and an interactive store locator.",
+      "A Next.js and Postgres store where garment-technology knowledge becomes product features: digital product passports, a measurement-based fit finder and technical flats instead of photos.",
     year: "2025–26",
-    role: "Design & front-end",
-    stack: ["React", "Vite", "React Router", "Context API", "Framer Motion", "Leaflet", "Tailwind"],
-    image: "/images/auro.webp",
-    imageAlt: "Auro storefront hero with the Auro wordmark over an editorial fashion photo",
+    role: "Product, design & full-stack development",
+    stack: ["Next.js 16", "React 19", "TypeScript", "PostgreSQL (Neon)", "Drizzle ORM", "Stripe", "Vitest", "Playwright", "GitHub Actions"],
+    image: "/images/auro-shop.webp",
+    imageAlt: "Auro shop grid with technical flat drawings of knitwear, a coat and a linen shirt",
     links: [
       { label: "Live demo", href: "https://auro-studio.vercel.app/" },
       { label: "Source", href: "https://github.com/anusirkas/shopping-cart" },
     ],
-    status: "In active development",
     sections: [
       {
         heading: "The idea",
         body: [
-          "Luxury fashion sites sell through restraint: generous whitespace, large imagery, quiet typography and motion that never gets in the way. Auro is my attempt to rebuild that feeling in React, from the perspective of someone who spent a decade on the product side of fashion.",
+          "Auro began as a luxury storefront inspired by Acne Studios, Prada and Celine. I rebuilt it as a full-stack store that uses what I learned in ten years of garment technology: how clothes are specified, sized and made.",
+          "Every product is a real record in Postgres: colourways, SKUs with stock, a size spec with finished garment measurements, and a passport describing where and how it was made.",
         ],
       },
       {
-        heading: "What I built",
+        heading: "Digital product passports",
         body: [
-          "A sticky header with category navigation and overlay panels for account, wishlist and cart. A full-screen editorial front page with campaign sections, a news grid and newsletter signup.",
-          "A context-based cart with a live item count in the header, and a store locator built on Leaflet with custom markers, city search and auto-zoom across Paris, London, New York, Copenhagen and Tallinn. The footer carries a shipping-country selector with flags.",
+          "The EU is introducing digital product passports for textiles. Each Auro product has one: fibre composition and origin, every stage of the supply chain from fibre to finishing, certifications, care, repair and end-of-life guidance, and an estimated footprint. A QR code links to it, as it would from a care label.",
         ],
       },
       {
-        heading: "Next",
+        heading: "A fit finder built on ease",
         body: [
-          "Auro is being rebuilt into a full-stack store: a real product catalogue with variants, filtering and search, persistent cart, test-mode checkout and an admin view — closer to the e-commerce systems I work on day to day.",
+          "Size advice usually compares body measurements with a size chart. Garment technologists think in ease: how much bigger than the body a garment is designed to be. A relaxed sweater has around 18 cm of room at the chest, a slim one about 4.",
+          "The fit finder compares your measurements with the finished garment and its intended ease, lets stretch knits go below zero ease while rigid wovens can't, weights waist above hip for trousers, and explains the result in plain language with a confidence level.",
+        ],
+      },
+      {
+        heading: "Technical flats instead of photos",
+        body: [
+          "Products are drawn as the line drawings sent to factories: 15 silhouettes in SVG with seams, ribs and buttons, recoloured for every colourway and textured by construction (knit, rib, twill, plain weave, satin, canvas). The whole catalogue looks consistent without a photo shoot.",
+        ],
+      },
+      {
+        heading: "Engineering decisions",
+        body: [
+          "Shop filters live in the URL, so every view is shareable, and each facet is counted with every other filter applied except its own, so options don't vanish while you choose.",
+          "The server never trusts the bag: checkout re-prices each line from the database and re-checks stock. A Stripe webhook marks orders paid and decrements stock with a conditional update, so two buyers can't oversell the last item, and repeated deliveries are ignored.",
+          "Without a database the store falls back to a bundled catalogue, so the demo stays up on free tiers. The domain logic has Vitest unit tests and runs through lint, type-checking and a production build on every push.",
         ],
       },
     ],
+    gallery: ["/images/auro-home.webp", "/images/auro-shop.webp", "/images/auro-product-fit-finder.webp", "/images/auro-passport.webp", "/images/auro-stores.webp"],
+    galleryShape: "landscape",
   },
   {
     slug: "anusirkas-store",
