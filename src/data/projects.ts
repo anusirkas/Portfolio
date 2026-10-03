@@ -157,39 +157,66 @@ export const featured: FeaturedProject[] = [
   {
     slug: "growth-mirror",
     title: "Growth Mirror",
-    kicker: "Weekly reflection tool for junior builders",
+    kicker: "AI reflection journal",
     summary:
-      "A deliberately narrow product: write about your week, get back where you grew, what's blocking you, and one practical next step.",
+      "A weekly journal for junior developers: answer five questions, and Gemini gives back where you grew, what's slowing you down and one concrete next step. Next week it asks if you took it, and the progress view shows your patterns over time. React, TypeScript and a Vercel Function, with a fallback that always answers.",
     year: "2026",
-    role: "Product, design & development",
-    stack: ["React", "TypeScript", "Vite", "Scoring engine"],
-    image: "/images/growth-mirror.webp",
-    imageAlt: "Growth Mirror weekly reflection form",
+    role: "Product, design & full-stack development",
+    stack: ["React", "TypeScript", "Vite", "Google Gemini", "Vercel Functions", "Vitest", "Playwright", "GitHub Actions"],
+    image: "/images/growth-mirror-reflection.webp",
+    imageAlt: "A week's answers on a journal page with the AI reflection beside it",
     links: [
       { label: "Live demo", href: "https://growth-mirror.vercel.app/" },
       { label: "Source", href: "https://github.com/anusirkas/growth-mirror" },
     ],
+    entryPoints: {
+      tryIt: [
+        { label: "Reflect on a week", href: "https://growth-mirror.vercel.app/#/", hint: "“Fill in an example week”, then reflect" },
+        { label: "See progress", href: "https://growth-mirror.vercel.app/#/progress", hint: "Follow-through rate and timeline" },
+        { label: "Browse the journal", href: "https://growth-mirror.vercel.app/#/history", hint: "Eight example weeks" },
+      ],
+      engineers: [
+        { label: "Architecture", href: "https://github.com/anusirkas/growth-mirror#architecture", hint: "Function, models and fallback" },
+        { label: "AI design notes", href: "https://github.com/anusirkas/growth-mirror#designing-the-ai-part", hint: "Schema, validation, thinking budget" },
+        { label: "Request handler", href: "https://github.com/anusirkas/growth-mirror/blob/master/server/reflect.ts", hint: "Timeout, rate limit, fallback" },
+        { label: "Handler tests", href: "https://github.com/anusirkas/growth-mirror/blob/master/server/reflect.test.ts", hint: "Every branch, model injected" },
+      ],
+    },
     sections: [
       {
         heading: "The problem",
         body: [
-          "When you work full-time and learn on the side, progress becomes invisible. You can be busy every day and still feel like you're standing still. Career switchers and junior developers feel this most.",
+          "When you work full-time and learn on the side, progress becomes invisible: you're busy every day and still feel like you're standing still. Growth Mirror is deliberately narrow. No streaks or dashboards, just one loop: reflect, take one step, say whether you took it, reflect again.",
         ],
       },
       {
-        heading: "Product decisions",
+        heading: "A journal, not a form",
         body: [
-          "I intentionally left out dashboards, streaks, reminders and calendars — they add noise rather than clarity. The MVP validates a single loop: reflection in, clarity out.",
-          "The user answers five prompts (what I worked on, learned, found difficult, avoided, want to improve). The app returns four things: progress spotted, biggest gap, next week's focus and one practical next step.",
+          "The interface is a field-notes journal: ruled pages, a margin line, serif ink. The AI's reflection sits beside your page like notes from a mentor, ending with a single next step. Next week the app asks whether you did it, and the progress view leads with that follow-through rate, followed by your recurring patterns and a weekly timeline.",
+          "The journal is stored only in the browser, so reflections never sit on a server.",
         ],
       },
       {
-        heading: "How it works",
+        heading: "Key decisions",
+        body: [],
+        list: [
+          "The Gemini key stays in a Vercel Function; the browser only ever talks to /api/reflect.",
+          "Replies use a JSON schema and are still validated server-side; off-schema output counts as a failure.",
+          "It always answers: no key, rate limit, timeout, model error or bad output all fall back to rule-based scoring, and the UI says which happened.",
+          "The free tier returns 503 at busy times, so a lighter model is tried before falling back.",
+          "Gemini 3 spends tokens thinking before it answers; the first replies were cut off mid-JSON, so the thinking level is set low with room for the output.",
+          "User answers are fenced as data in the prompt, and the page tells users their text goes to Google.",
+        ],
+      },
+      {
+        heading: "Quality",
         body: [
-          "The intelligence layer is mocked on purpose: weighted keyword scoring across all answers identifies the dominant pattern — focus, technical growth or confidence — rather than first-match rules. A live language-model version with saved history is the next iteration.",
+          "18 unit tests cover validation, parsing, the fallback and every branch of the request handler, with the model injected so tests never call Gemini. 16 Playwright tests run the app on desktop and mobile with the AI stubbed. CI runs both on every push.",
         ],
       },
     ],
+    gallery: ["/images/growth-mirror-reflection.webp", "/images/growth-mirror-progress.webp", "/images/growth-mirror-journal.webp"],
+    galleryShape: "landscape",
   },
   {
     slug: "wearable-art-database",
