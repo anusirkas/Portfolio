@@ -221,36 +221,73 @@ export const featured: FeaturedProject[] = [
   {
     slug: "wearable-art-database",
     title: "Wearable Art Archive",
-    kicker: "Relational data model for wearable art",
+    kicker: "Searchable archive of wearable art",
     summary:
-      "A PostgreSQL schema for documenting wearable art across its lifecycle — artists, materials, techniques, creation stages, commissions and ownership.",
+      "98 pieces of wearable art, from 19th-century couture to Iris van Herpen, documented by maker, material, technique and the hours of handwork behind them. A TalTech databases project rebuilt as a live Next.js app on PostgreSQL, with full-text search and a home page laid out like a museum visit.",
     year: "2025–26",
-    role: "Data modelling & back-end",
-    stack: ["PostgreSQL", "SQL", "ER modelling", "Next.js", "TypeScript"],
-    image: "/images/wearable-art-erd.webp",
-    imageAlt: "Entity-relationship diagram of the wearable art database",
-    links: [{ label: "Source", href: "https://github.com/anusirkas/wearable-art-app" }],
-    status: "Database complete, application in progress",
+    role: "Data modelling, design & full-stack development",
+    stack: ["Next.js 16", "React 19", "TypeScript", "PostgreSQL (Neon)", "Full-text search", "pg_trgm", "Server Actions", "Vercel"],
+    image: "/images/wearable-art-home.webp",
+    imageAlt: "Archive entrance: a McQueen feather dress behind the headline Made to be worn. Kept to be remembered.",
+    links: [
+      { label: "Live site", href: "https://wearable-art-database.vercel.app/" },
+      { label: "Source", href: "https://github.com/anusirkas/wearable-art-database" },
+    ],
+    entryPoints: {
+      tryIt: [
+        { label: "Walk through the rooms", href: "https://wearable-art-database.vercel.app/", hint: "Scroll: the rooms slide over each other" },
+        { label: "Search with a typo", href: "https://wearable-art-database.vercel.app/archive?q=castelani", hint: "“castelani” still finds Castellani" },
+        { label: "Sustainable materials only", href: "https://wearable-art-database.vercel.app/archive?sustainable=1", hint: "Filter by material origin" },
+        { label: "See the data model", href: "https://wearable-art-database.vercel.app/about", hint: "ERD and the course queries, live" },
+      ],
+      engineers: [
+        { label: "Schema", href: "https://github.com/anusirkas/wearable-art-database/blob/master/db/schema.sql", hint: "21 tables, constraints, search view" },
+        { label: "Search query", href: "https://github.com/anusirkas/wearable-art-database/blob/master/lib/queries.ts", hint: "Full-text plus trigram fallback" },
+        { label: "Data pipeline", href: "https://github.com/anusirkas/wearable-art-database/tree/master/scripts", hint: "Met API and Commons harvesters" },
+        { label: "README", href: "https://github.com/anusirkas/wearable-art-database#readme", hint: "Estonian to English table map" },
+      ],
+    },
     sections: [
       {
-        heading: "The idea",
+        heading: "From course project to live archive",
         body: [
-          "Wearable art sits between fashion and art: unique, handmade pieces whose value depends on documenting how, by whom and from what they were made. Spreadsheets and generic shop software don't capture that.",
+          "It started as a TalTech databases assignment: 21 tables in Oracle to document wearable art from first sketch to sale, with materials and their origin, creation stages and hours, exhibitions, commissions, transactions and a trust score. The scripts never ran as written, so the port to PostgreSQL fixed every constraint and renamed the schema in English, with a map back to the original Estonian names.",
         ],
       },
       {
-        heading: "What's done",
+        heading: "Three collections, all openly licensed",
         body: [
-          "An ER design and relational schema covering artworks, artists, materials and techniques, creation stages, transactions and commissions, exhibitions and media assets — plus SQL scripts for creation, sample data and exploratory queries. Started as a TalTech databases project.",
+          "48 historic pieces from The Met's open-access collection, collected through its API at one request a second. 31 pieces by 16 contemporary designers, from museum photographs on Wikimedia Commons. Six fictional studios with credited Unsplash photography show the commissioning and trust features. Every image carries its photographer and licence.",
         ],
       },
       {
-        heading: "Next",
+        heading: "A museum visit, not a product grid",
         body: [
-          "Building the application layer on top: ownership and transaction logic, and a UI for artists and collectors to browse and document pieces.",
+          "The home page is a sequence of rooms: a full-screen entrance, then the archive on oxblood walls, a white room where scrolling drives a horizontal gallery of contemporary work, a materials room on sustainability, and the studios. Each room slides over the last. Every piece gets a museum wall label.",
+        ],
+      },
+      {
+        heading: "Key decisions",
+        body: [],
+        list: [
+          "Search is one materialized view per piece: title and maker weighted highest, then materials and techniques, then descriptions, with GIN indexes on the tsvector and on trigrams.",
+          "Queries match in a plain and an English dictionary, so “dresses” finds “dress”, and fall back to trigram similarity on accent-free text for typos.",
+          "unaccent isn't immutable, so a pinned wrapper function makes it usable in the indexed view.",
+          "Strangers can't publish: suggestions and commission requests only reach a review queue, rate-limited per visitor with the IP stored as a salted hash.",
+          "Neon over Supabase: the free tier scales to zero and wakes on the next request instead of pausing the project.",
+          "The rooms use CSS scroll-driven animations where supported and plain stacking elsewhere; motion is off for reduced-motion users and on small screens.",
         ],
       },
     ],
+    gallery: [
+      "/images/wearable-art-home.webp",
+      "/images/wearable-art-archive-room.webp",
+      "/images/wearable-art-contemporary.webp",
+      "/images/wearable-art-search.webp",
+      "/images/wearable-art-artwork.webp",
+      "/images/wearable-art-erd.webp",
+    ],
+    galleryShape: "landscape",
   },
 ];
 
