@@ -759,30 +759,65 @@ em::before {
   color: var(--ink-2);
   max-width: 40em;
 }
-.case-actions {
-  list-style: none;
-  margin: 8px 0 0;
-  padding: 0;
-  border-top: 1.5px dashed var(--line);
-}
-.case-actions li {
+.entry-points {
   display: grid;
-  grid-template-columns: minmax(180px, 220px) 1fr;
-  gap: 4px 24px;
-  padding: 14px 0;
-  border-bottom: 1.5px dashed var(--line);
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: clamp(40px, 6vw, 72px);
 }
-.case-actions a {
+.entry-box {
+  border: 1.5px dashed var(--line);
+  padding: 20px 24px;
+}
+.entry-box h2 {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+.entry-box ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.entry-box li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2px 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+}
+.entry-box li:last-child {
+  border-bottom: 0;
+}
+.entry-box a {
   font-weight: 500;
   text-underline-offset: 4px;
   text-decoration-color: var(--accent);
 }
-.case-actions span {
-  color: var(--ink-2);
-  font-size: 16px;
+.entry-box span {
+  color: var(--muted);
+  font-size: 14px;
 }
-@media (max-width: 640px) {
-  .case-actions li {
+.case-list {
+  margin: 0;
+  padding-left: 1.1em;
+  font-size: 18px;
+  color: var(--ink-2);
+  max-width: 40em;
+}
+.case-list li {
+  padding: 4px 0 8px;
+}
+.case-list li::marker {
+  color: var(--accent);
+}
+@media (max-width: 800px) {
+  .entry-points {
     grid-template-columns: 1fr;
   }
 }

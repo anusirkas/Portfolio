@@ -61,6 +61,29 @@ export default function CaseStudy() {
         </div>
       )}
 
+      {project.entryPoints && (
+        <div className="entry-points" data-reveal>
+          {(
+            [
+              ["Try it", project.entryPoints.tryIt],
+              ["For engineers", project.entryPoints.engineers],
+            ] as const
+          ).map(([title, links]) => (
+            <section key={title} className="entry-box" aria-label={title}>
+              <h2>{title}</h2>
+              <ul>
+                {links.map((l) => (
+                  <li key={l.href}>
+                    <a href={l.href} target="_blank" rel="noreferrer">{l.label} ↗</a>
+                    <span>{l.hint}</span>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ))}
+        </div>
+      )}
+
       <figure className="case-hero" data-reveal>
         <img src={project.image} alt={project.imageAlt} />
       </figure>
@@ -73,13 +96,10 @@ export default function CaseStudy() {
               {s.body.map((p) => (
                 <p key={p.slice(0, 32)}>{p}</p>
               ))}
-              {s.actions && (
-                <ul className="case-actions">
-                  {s.actions.map((a) => (
-                    <li key={a.href + a.label}>
-                      <a href={a.href} target="_blank" rel="noreferrer">{a.label} ↗</a>
-                      <span>{a.hint}</span>
-                    </li>
+              {s.list && (
+                <ul className="case-list">
+                  {s.list.map((item) => (
+                    <li key={item.slice(0, 32)}>{item}</li>
                   ))}
                 </ul>
               )}

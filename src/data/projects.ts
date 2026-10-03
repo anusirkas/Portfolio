@@ -1,10 +1,12 @@
 export type Link = { label: string; href: string };
 
+export type EntryLink = { label: string; href: string; hint: string };
+
 export type CaseSection = {
   heading: string;
   body: string[];
-  /** Optional "try it" links shown under the paragraphs. */
-  actions?: { label: string; href: string; hint: string }[];
+  /** Optional bullet list, e.g. key decisions. */
+  list?: string[];
 };
 
 export type FeaturedProject = {
@@ -20,6 +22,8 @@ export type FeaturedProject = {
   links: Link[];
   status?: string;
   sections: CaseSection[];
+  /** Two ways in: clicking around the live product, or reading the code. */
+  entryPoints?: { tryIt: EntryLink[]; engineers: EntryLink[] };
   gallery?: string[];
   /** Screenshot tiles: tall page captures (portrait) or browser-sized shots (landscape). */
   galleryShape?: "portrait" | "landscape";
@@ -40,7 +44,7 @@ export const featured: FeaturedProject[] = [
     title: "Auro",
     kicker: "Full-stack fashion-tech store",
     summary:
-      "A Next.js and Postgres store where garment-technology knowledge becomes product features: digital product passports, a fit finder built on garment ease, technical flats and 3D fabric, with Stripe checkout and an admin.",
+      "A working fashion store built with Next.js, TypeScript and Postgres, with test-mode Stripe payments, an admin and automated tests. What makes it different comes from my ten years in garment technology: sizes recommended from garment measurements, a product passport for every item and products drawn as technical flats.",
     year: "2025–26",
     role: "Product, design & full-stack development",
     stack: ["Next.js 16", "React 19", "TypeScript", "PostgreSQL (Neon)", "Drizzle ORM", "Stripe", "three.js", "Vitest", "Playwright", "GitHub Actions"],
@@ -48,53 +52,60 @@ export const featured: FeaturedProject[] = [
     imageAlt: "Auro shop grid with technical flat drawings of knitwear, a coat and a linen shirt",
     links: [
       { label: "Live demo", href: "https://auro-studio.vercel.app/" },
-      { label: "Back office demo", href: "https://auro-studio.vercel.app/admin" },
       { label: "Source", href: "https://github.com/anusirkas/shopping-cart" },
     ],
+    entryPoints: {
+      tryIt: [
+        { label: "Find your size", href: "https://auro-studio.vercel.app/product/pohja-coat", hint: "“Find my size” on a coat" },
+        { label: "Run the back office", href: "https://auro-studio.vercel.app/admin", hint: "Edit stock, see it on the product page" },
+        { label: "See the fabric in 3D", href: "https://auro-studio.vercel.app/product/vale-crew", hint: "Switch to “3D fabric”, drag to rotate" },
+        { label: "Place a test order", href: "https://auro-studio.vercel.app/shop", hint: "Card 4242 4242 4242 4242" },
+      ],
+      engineers: [
+        { label: "Architecture", href: "https://github.com/anusirkas/shopping-cart#architecture", hint: "Request, payment and webhook flow" },
+        { label: "Fit-finder algorithm", href: "https://github.com/anusirkas/shopping-cart/blob/main/src/lib/fit.ts", hint: "src/lib/fit.ts and its tests" },
+        { label: "Stripe webhook", href: "https://github.com/anusirkas/shopping-cart/blob/main/src/app/api/stripe/webhook/route.ts", hint: "Idempotent, race-safe stock" },
+        { label: "Trade-offs", href: "https://github.com/anusirkas/shopping-cart#trade-offs-and-known-limitations", hint: "What a production store would change" },
+      ],
+    },
     sections: [
       {
-        heading: "Why it matters",
+        heading: "Product passports",
         body: [
-          "Most fashion e-commerce treats clothes as pictures with a price. Auro treats them the way the industry makes them: as specified products with measurements, materials and a supply chain, and turns that knowledge into features shoppers can use.",
-          "It's a complete, working store, not a mock-up: a real database, real (test-mode) payments, an admin, automated tests and continuous deployment. It shows how I work: product thinking from ten years in garment technology, combined with full-stack engineering.",
+          "The EU is introducing digital product passports for textiles. Every product has one: fibre composition and origin, each stage of the supply chain, certifications, care, repair, end-of-life and an estimated footprint, with a QR code as it would appear on a care label.",
+          "Modelled relationally in Postgres (passports, fibres, supply stages) and statically generated per product.",
         ],
       },
       {
-        heading: "Try it yourself",
-        body: ["Everything is live and free to explore. Nothing you do can break it: demo changes reset every night."],
-        actions: [
-          { label: "Find your size", href: "https://auro-studio.vercel.app/product/pohja-coat", hint: "Open “Find my size” on a coat and enter your chest measurement." },
-          { label: "Read a product passport", href: "https://auro-studio.vercel.app/passport/AU-007-COA", hint: "Materials, every factory in the chain, care, repair and footprint." },
-          { label: "See the fabric in 3D", href: "https://auro-studio.vercel.app/product/vale-crew", hint: "Switch the product view to “3D fabric” and drag to rotate." },
-          { label: "Run the back office", href: "https://auro-studio.vercel.app/admin", hint: "Press “Try the back office”, change stock, then check the product page." },
-          { label: "Place a test order", href: "https://auro-studio.vercel.app/shop", hint: "Checkout with card 4242 4242 4242 4242, any future date and CVC." },
+        heading: "Fit finder",
+        body: [
+          "Garment technologists think in ease: how much bigger than the body a garment is designed to be, around 18 cm at the chest for a relaxed sweater and 4 for a slim one. The fit finder compares your measurements with each size's finished measurements and its intended ease, and explains the result with a confidence level.",
+          "A pure, unit-tested scoring function: under-fit is penalised more than over-fit, and fabric stretch sets how far below zero ease a garment can go.",
         ],
       },
       {
-        heading: "Digital product passports",
+        heading: "Technical flats and 3D fabric",
         body: [
-          "The EU is introducing digital product passports for textiles. Every Auro product already has one: fibre composition and origin, each stage of the supply chain, certifications, care, repair and end-of-life guidance, and an estimated footprint, linked by a QR code as it would be from a care label.",
+          "Products are drawn as the line drawings sent to factories, recoloured per colourway, and a 3D swatch shows how the fabric is constructed.",
+          "15 silhouettes as SVG paths with pattern fills per construction; the swatch is React Three Fiber with procedurally drawn yarn textures, loaded only when opened.",
         ],
       },
       {
-        heading: "A fit finder built on garment ease",
-        body: [
-          "Size advice usually compares your measurements with a size chart. Garment technologists think in ease: how much bigger than the body a garment is designed to be. A relaxed sweater has around 18 cm of room at the chest, a slim one about 4.",
-          "The fit finder compares your measurements with the finished garment and its intended ease, allows stretch knits to be smaller than the body while rigid fabrics can't, and explains its recommendation in plain language with a confidence level.",
+        heading: "Key decisions",
+        body: [],
+        list: [
+          "The server never trusts the bag: checkout re-prices every line from the database and re-checks stock before creating the Stripe session.",
+          "Stock is decremented in the webhook with a conditional update, so the last item can't be sold twice, and repeated deliveries are ignored.",
+          "Filter state lives in the URL, so every view is shareable, and facets are counted without their own filter so options don't disappear while you choose.",
+          "If Neon is unreachable, browsing falls back to bundled data while checkout refuses to: availability for reading, correctness for money.",
+          "The admin is open to visitors with a one-click demo session; a nightly cron resets stock to seed minus real sales, in a single SQL statement.",
+          "Known trade-off: stock isn't reserved during checkout. A production store would hold it for the session or refund when the decrement fails.",
         ],
       },
       {
-        heading: "Drawn, not photographed",
+        heading: "Quality",
         body: [
-          "Products are shown as technical flats, the line drawings sent to factories: 15 silhouettes in SVG, recoloured for every colourway and textured by how the fabric is made. Beside each flat, a 3D swatch drapes from a rail with a yarn structure generated for its construction, from knit loops to twill diagonals.",
-        ],
-      },
-      {
-        heading: "Engineering",
-        body: [
-          "Next.js 16 and React 19 with TypeScript, PostgreSQL on Neon through Drizzle ORM, Stripe Checkout with a signed webhook, three.js for the fabric view, deployed on Vercel. 29 products and 352 SKUs with live stock.",
-          "The server re-prices and re-checks every order instead of trusting the browser, and stock is decremented with a conditional update so the last item can't be sold twice. Filters live in the URL so every view is shareable. If the database is unreachable, browsing falls back to bundled data while checkout refuses to.",
-          "22 unit tests and 15 end-to-end tests on desktop and mobile run with linting, type-checking and a production build on every push. The README on GitHub goes deeper into the architecture and trade-offs.",
+          "22 unit tests (Vitest) and 15 end-to-end tests (Playwright, desktop and mobile) run with linting, type-checking and a production build on every push to GitHub Actions. Payments were verified end to end on the live site.",
         ],
       },
     ],
