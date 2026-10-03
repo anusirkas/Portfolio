@@ -192,7 +192,7 @@ export const featured: FeaturedProject[] = [
       {
         heading: "A journal, not a form",
         body: [
-          "The interface is a field-notes journal: ruled pages, a margin line, serif ink. The AI's reflection sits beside your page like notes from a mentor, ending with a single next step. Next week the app asks whether you did it, and the progress view leads with that follow-through rate, followed by your recurring patterns and a weekly timeline.",
+          "The interface is an engineer's lab notebook: a dot grid, a highlighter, a paperclip on the AI's reflection and the next step on a sticky note. Next week the app asks whether you did it and stamps the answer DONE or NOT YET. The progress view leads with that follow-through rate, followed by your recurring patterns and a weekly timeline.",
           "The journal is stored only in the browser, so reflections never sit on a server.",
         ],
       },
