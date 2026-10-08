@@ -40,6 +40,77 @@ export type ArchiveProject = {
 
 export const featured: FeaturedProject[] = [
   {
+    slug: "wearable-art-archive",
+    title: "Wearable Art Archive",
+    kicker: "Searchable archive of wearable art",
+    summary:
+      "98 pieces of wearable art, from 19th-century couture to Iris van Herpen, documented by maker, material, technique and the hours of handwork behind them. A TalTech databases project rebuilt as a live Next.js app on PostgreSQL, with full-text search and a home page laid out like a museum visit.",
+    year: "2025–26",
+    role: "Data modelling, design & full-stack development",
+    stack: ["Next.js 16", "React 19", "TypeScript", "PostgreSQL (Neon)", "Full-text search", "pg_trgm", "Server Actions", "Vercel"],
+    image: "/images/wearable-art-home.webp",
+    imageAlt: "Archive entrance: a McQueen feather dress behind the headline Made to be worn. Kept to be remembered.",
+    links: [
+      { label: "Live site", href: "https://wearable-art-archive.vercel.app/" },
+      { label: "Source", href: "https://github.com/anusirkas/wearable-art-archive" },
+    ],
+    entryPoints: {
+      tryIt: [
+        { label: "Walk through the rooms", href: "https://wearable-art-archive.vercel.app/", hint: "Scroll: the rooms slide over each other" },
+        { label: "Search with a typo", href: "https://wearable-art-archive.vercel.app/archive?q=castelani", hint: "“castelani” still finds Castellani" },
+        { label: "Sustainable materials only", href: "https://wearable-art-archive.vercel.app/archive?sustainable=1", hint: "Filter by material origin" },
+        { label: "See the data model", href: "https://wearable-art-archive.vercel.app/about", hint: "ERD and the course queries, live" },
+      ],
+      engineers: [
+        { label: "Schema", href: "https://github.com/anusirkas/wearable-art-archive/blob/master/db/schema.sql", hint: "21 tables, constraints, search view" },
+        { label: "Search query", href: "https://github.com/anusirkas/wearable-art-archive/blob/master/lib/queries.ts", hint: "Full-text plus trigram fallback" },
+        { label: "Data pipeline", href: "https://github.com/anusirkas/wearable-art-archive/tree/master/scripts", hint: "Met API and Commons harvesters" },
+        { label: "README", href: "https://github.com/anusirkas/wearable-art-archive#readme", hint: "Estonian to English table map" },
+      ],
+    },
+    sections: [
+      {
+        heading: "From course project to live archive",
+        body: [
+          "It started as a TalTech databases assignment: 21 tables in Oracle to document wearable art from first sketch to sale, with materials and their origin, creation stages and hours, exhibitions, commissions, transactions and a trust score. The scripts never ran as written, so the port to PostgreSQL fixed every constraint and renamed the schema in English, with a map back to the original Estonian names.",
+        ],
+      },
+      {
+        heading: "Three collections, all openly licensed",
+        body: [
+          "48 historic pieces from The Met's open-access collection, collected through its API at one request a second. 31 pieces by 16 contemporary designers, from museum photographs on Wikimedia Commons. Six fictional studios with credited Unsplash photography show the commissioning and trust features. Every image carries its photographer and licence.",
+        ],
+      },
+      {
+        heading: "A museum visit, not a product grid",
+        body: [
+          "The home page is a sequence of rooms: a full-screen entrance, then the archive on oxblood walls, a white room where scrolling drives a horizontal gallery of contemporary work, a materials room on sustainability, and the studios. Each room slides over the last. Every piece gets a museum wall label.",
+        ],
+      },
+      {
+        heading: "Key decisions",
+        body: [],
+        list: [
+          "Search is one materialized view per piece: title and maker weighted highest, then materials and techniques, then descriptions, with GIN indexes on the tsvector and on trigrams.",
+          "Queries match in a plain and an English dictionary, so “dresses” finds “dress”, and fall back to trigram similarity on accent-free text for typos.",
+          "unaccent isn't immutable, so a pinned wrapper function makes it usable in the indexed view.",
+          "Strangers can't publish: suggestions and commission requests only reach a review queue, rate-limited per visitor with the IP stored as a salted hash.",
+          "Neon over Supabase: the free tier scales to zero and wakes on the next request instead of pausing the project.",
+          "The rooms use CSS scroll-driven animations where supported and plain stacking elsewhere; motion is off for reduced-motion users and on small screens.",
+        ],
+      },
+    ],
+    gallery: [
+      "/images/wearable-art-home.webp",
+      "/images/wearable-art-archive-room.webp",
+      "/images/wearable-art-contemporary.webp",
+      "/images/wearable-art-search.webp",
+      "/images/wearable-art-artwork.webp",
+      "/images/wearable-art-erd.webp",
+    ],
+    galleryShape: "landscape",
+  },
+  {
     slug: "auro",
     title: "Auro",
     kicker: "Full-stack fashion-tech store",
@@ -121,40 +192,6 @@ export const featured: FeaturedProject[] = [
     galleryShape: "landscape",
   },
   {
-    slug: "anusirkas-store",
-    title: "anusirkas.ee",
-    kicker: "My own WooCommerce store, 2021–2026",
-    summary:
-      "Five years of running a real online business for handmade zero-waste knitwear — design, product data, content, SEO, orders and maintenance.",
-    year: "2021–26",
-    role: "Founder, designer, store owner",
-    stack: ["WooCommerce", "WordPress", "SEO", "Product data", "Photography"],
-    image: "/images/shop-1.webp",
-    imageAlt: "Product pages from the anusirkas.ee knitwear store",
-    links: [],
-    sections: [
-      {
-        heading: "Context",
-        body: [
-          "Before moving into engineering I ran my own zero-waste knitwear brand. The online store was its main sales channel, and I was responsible for every part of it.",
-        ],
-      },
-      {
-        heading: "What it involved",
-        body: [
-          "Designing and building the store, managing the product catalogue and variants, writing and photographing content, handling orders and customer communication, SEO, and keeping the site maintained and updated.",
-        ],
-      },
-      {
-        heading: "Why it matters for my engineering",
-        body: [
-          "It taught me what an e-commerce system looks like from the merchant's side: where product data breaks, what customers actually get stuck on, and which details move sales. I bring that perspective to the commerce platforms I build today.",
-        ],
-      },
-    ],
-    gallery: ["/images/shop-1.webp", "/images/shop-2.webp", "/images/shop-3.webp", "/images/shop-4.webp", "/images/shop-5.webp", "/images/shop-6.webp"],
-  },
-  {
     slug: "growth-mirror",
     title: "Growth Mirror",
     kicker: "AI reflection journal",
@@ -219,75 +256,38 @@ export const featured: FeaturedProject[] = [
     galleryShape: "landscape",
   },
   {
-    slug: "wearable-art-archive",
-    title: "Wearable Art Archive",
-    kicker: "Searchable archive of wearable art",
+    slug: "anusirkas-store",
+    title: "anusirkas.ee",
+    kicker: "My own WooCommerce store, 2021–2026",
     summary:
-      "98 pieces of wearable art, from 19th-century couture to Iris van Herpen, documented by maker, material, technique and the hours of handwork behind them. A TalTech databases project rebuilt as a live Next.js app on PostgreSQL, with full-text search and a home page laid out like a museum visit.",
-    year: "2025–26",
-    role: "Data modelling, design & full-stack development",
-    stack: ["Next.js 16", "React 19", "TypeScript", "PostgreSQL (Neon)", "Full-text search", "pg_trgm", "Server Actions", "Vercel"],
-    image: "/images/wearable-art-home.webp",
-    imageAlt: "Archive entrance: a McQueen feather dress behind the headline Made to be worn. Kept to be remembered.",
-    links: [
-      { label: "Live site", href: "https://wearable-art-archive.vercel.app/" },
-      { label: "Source", href: "https://github.com/anusirkas/wearable-art-archive" },
-    ],
-    entryPoints: {
-      tryIt: [
-        { label: "Walk through the rooms", href: "https://wearable-art-archive.vercel.app/", hint: "Scroll: the rooms slide over each other" },
-        { label: "Search with a typo", href: "https://wearable-art-archive.vercel.app/archive?q=castelani", hint: "“castelani” still finds Castellani" },
-        { label: "Sustainable materials only", href: "https://wearable-art-archive.vercel.app/archive?sustainable=1", hint: "Filter by material origin" },
-        { label: "See the data model", href: "https://wearable-art-archive.vercel.app/about", hint: "ERD and the course queries, live" },
-      ],
-      engineers: [
-        { label: "Schema", href: "https://github.com/anusirkas/wearable-art-archive/blob/master/db/schema.sql", hint: "21 tables, constraints, search view" },
-        { label: "Search query", href: "https://github.com/anusirkas/wearable-art-archive/blob/master/lib/queries.ts", hint: "Full-text plus trigram fallback" },
-        { label: "Data pipeline", href: "https://github.com/anusirkas/wearable-art-archive/tree/master/scripts", hint: "Met API and Commons harvesters" },
-        { label: "README", href: "https://github.com/anusirkas/wearable-art-archive#readme", hint: "Estonian to English table map" },
-      ],
-    },
+      "Five years of running a real online business for handmade zero-waste knitwear — design, product data, content, SEO, orders and maintenance.",
+    year: "2021–26",
+    role: "Founder, designer, store owner",
+    stack: ["WooCommerce", "WordPress", "SEO", "Product data", "Photography"],
+    image: "/images/shop-1.webp",
+    imageAlt: "Product pages from the anusirkas.ee knitwear store",
+    links: [],
     sections: [
       {
-        heading: "From course project to live archive",
+        heading: "Context",
         body: [
-          "It started as a TalTech databases assignment: 21 tables in Oracle to document wearable art from first sketch to sale, with materials and their origin, creation stages and hours, exhibitions, commissions, transactions and a trust score. The scripts never ran as written, so the port to PostgreSQL fixed every constraint and renamed the schema in English, with a map back to the original Estonian names.",
+          "Before moving into engineering I ran my own zero-waste knitwear brand. The online store was its main sales channel, and I was responsible for every part of it.",
         ],
       },
       {
-        heading: "Three collections, all openly licensed",
+        heading: "What it involved",
         body: [
-          "48 historic pieces from The Met's open-access collection, collected through its API at one request a second. 31 pieces by 16 contemporary designers, from museum photographs on Wikimedia Commons. Six fictional studios with credited Unsplash photography show the commissioning and trust features. Every image carries its photographer and licence.",
+          "Designing and building the store, managing the product catalogue and variants, writing and photographing content, handling orders and customer communication, SEO, and keeping the site maintained and updated.",
         ],
       },
       {
-        heading: "A museum visit, not a product grid",
+        heading: "Why it matters for my engineering",
         body: [
-          "The home page is a sequence of rooms: a full-screen entrance, then the archive on oxblood walls, a white room where scrolling drives a horizontal gallery of contemporary work, a materials room on sustainability, and the studios. Each room slides over the last. Every piece gets a museum wall label.",
-        ],
-      },
-      {
-        heading: "Key decisions",
-        body: [],
-        list: [
-          "Search is one materialized view per piece: title and maker weighted highest, then materials and techniques, then descriptions, with GIN indexes on the tsvector and on trigrams.",
-          "Queries match in a plain and an English dictionary, so “dresses” finds “dress”, and fall back to trigram similarity on accent-free text for typos.",
-          "unaccent isn't immutable, so a pinned wrapper function makes it usable in the indexed view.",
-          "Strangers can't publish: suggestions and commission requests only reach a review queue, rate-limited per visitor with the IP stored as a salted hash.",
-          "Neon over Supabase: the free tier scales to zero and wakes on the next request instead of pausing the project.",
-          "The rooms use CSS scroll-driven animations where supported and plain stacking elsewhere; motion is off for reduced-motion users and on small screens.",
+          "It taught me what an e-commerce system looks like from the merchant's side: where product data breaks, what customers actually get stuck on, and which details move sales. I bring that perspective to the commerce platforms I build today.",
         ],
       },
     ],
-    gallery: [
-      "/images/wearable-art-home.webp",
-      "/images/wearable-art-archive-room.webp",
-      "/images/wearable-art-contemporary.webp",
-      "/images/wearable-art-search.webp",
-      "/images/wearable-art-artwork.webp",
-      "/images/wearable-art-erd.webp",
-    ],
-    galleryShape: "landscape",
+    gallery: ["/images/shop-1.webp", "/images/shop-2.webp", "/images/shop-3.webp", "/images/shop-4.webp", "/images/shop-5.webp", "/images/shop-6.webp"],
   },
 ];
 
