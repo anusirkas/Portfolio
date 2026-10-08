@@ -337,11 +337,11 @@ export const archive: ArchiveProject[] = [
     ],
   },
   {
-    title: "Flight Seat App",
+    title: "Seatwise",
     image: "/images/flight.webp",
-    year: "2025",
-    stack: "React · Tailwind",
-    note: "Flight selection and seat recommendation logic",
+    year: "2026",
+    stack: "React · TypeScript · Vitest",
+    note: "Picks the best seats for a group on a real cabin map and explains why",
     links: [
       { label: "Demo", href: "https://flight-seat-app.vercel.app/" },
       { label: "Code", href: "https://github.com/anusirkas/flight-seat-app" },
