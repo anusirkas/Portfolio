@@ -293,14 +293,25 @@ export const featured: FeaturedProject[] = [
 
 export const archive: ArchiveProject[] = [
   {
-    title: "Mini Message Board",
-    image: "/images/message-board.webp",
+    title: "Jacquard",
+    image: "/images/jacquard.webp",
     year: "2026",
-    stack: "Node.js · Express · EJS · MongoDB",
-    note: "Chat-style board with dark mode, emoji picker and persistent storage",
+    stack: "Three.js · TypeScript · Vitest",
+    note: "Type your name and a 3D loom weaves it into damask, bit by bit",
     links: [
-      { label: "Demo", href: "https://mini-message-board-b2bg.onrender.com/" },
-      { label: "Code", href: "https://github.com/anusirkas/mini-message-board" },
+      { label: "Demo", href: "https://jacquard-loom.vercel.app/" },
+      { label: "Code", href: "https://github.com/anusirkas/jacquard-loom" },
+    ],
+  },
+  {
+    title: "Seatwise",
+    image: "/images/flight.webp",
+    year: "2026",
+    stack: "React · TypeScript · Vitest",
+    note: "Picks the best seats for a group on a real cabin map and explains why",
+    links: [
+      { label: "Demo", href: "https://seatwise-flights.vercel.app/" },
+      { label: "Code", href: "https://github.com/anusirkas/seatwise-flights" },
     ],
   },
   {
@@ -337,14 +348,14 @@ export const archive: ArchiveProject[] = [
     ],
   },
   {
-    title: "Seatwise",
-    image: "/images/flight.webp",
+    title: "Mini Message Board",
+    image: "/images/message-board.webp",
     year: "2026",
-    stack: "React · TypeScript · Vitest",
-    note: "Picks the best seats for a group on a real cabin map and explains why",
+    stack: "Node.js · Express · EJS · MongoDB",
+    note: "Chat-style board with dark mode, emoji picker and persistent storage",
     links: [
-      { label: "Demo", href: "https://seatwise-flights.vercel.app/" },
-      { label: "Code", href: "https://github.com/anusirkas/seatwise-flights" },
+      { label: "Demo", href: "https://mini-message-board-b2bg.onrender.com/" },
+      { label: "Code", href: "https://github.com/anusirkas/mini-message-board" },
     ],
   },
   {
@@ -380,17 +391,6 @@ export const archive: ArchiveProject[] = [
     links: [
       { label: "Demo", href: "https://anusirkas.github.io/signup-form/" },
       { label: "Code", href: "https://github.com/anusirkas/signup-form" },
-    ],
-  },
-  {
-    title: "3D Space",
-    image: "/images/3d-space.webp",
-    year: "2025",
-    stack: "Three.js · Vite",
-    note: "First steps in WebGL",
-    links: [
-      { label: "Demo", href: "https://3d-space-beta.vercel.app/" },
-      { label: "Code", href: "https://github.com/anusirkas/3D-space" },
     ],
   },
   {
