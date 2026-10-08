@@ -219,7 +219,7 @@ export const featured: FeaturedProject[] = [
     galleryShape: "landscape",
   },
   {
-    slug: "wearable-art-database",
+    slug: "wearable-art-archive",
     title: "Wearable Art Archive",
     kicker: "Searchable archive of wearable art",
     summary:
@@ -230,21 +230,21 @@ export const featured: FeaturedProject[] = [
     image: "/images/wearable-art-home.webp",
     imageAlt: "Archive entrance: a McQueen feather dress behind the headline Made to be worn. Kept to be remembered.",
     links: [
-      { label: "Live site", href: "https://wearable-art-database.vercel.app/" },
-      { label: "Source", href: "https://github.com/anusirkas/wearable-art-database" },
+      { label: "Live site", href: "https://wearable-art-archive.vercel.app/" },
+      { label: "Source", href: "https://github.com/anusirkas/wearable-art" },
     ],
     entryPoints: {
       tryIt: [
-        { label: "Walk through the rooms", href: "https://wearable-art-database.vercel.app/", hint: "Scroll: the rooms slide over each other" },
-        { label: "Search with a typo", href: "https://wearable-art-database.vercel.app/archive?q=castelani", hint: "“castelani” still finds Castellani" },
-        { label: "Sustainable materials only", href: "https://wearable-art-database.vercel.app/archive?sustainable=1", hint: "Filter by material origin" },
-        { label: "See the data model", href: "https://wearable-art-database.vercel.app/about", hint: "ERD and the course queries, live" },
+        { label: "Walk through the rooms", href: "https://wearable-art-archive.vercel.app/", hint: "Scroll: the rooms slide over each other" },
+        { label: "Search with a typo", href: "https://wearable-art-archive.vercel.app/archive?q=castelani", hint: "“castelani” still finds Castellani" },
+        { label: "Sustainable materials only", href: "https://wearable-art-archive.vercel.app/archive?sustainable=1", hint: "Filter by material origin" },
+        { label: "See the data model", href: "https://wearable-art-archive.vercel.app/about", hint: "ERD and the course queries, live" },
       ],
       engineers: [
-        { label: "Schema", href: "https://github.com/anusirkas/wearable-art-database/blob/master/db/schema.sql", hint: "21 tables, constraints, search view" },
-        { label: "Search query", href: "https://github.com/anusirkas/wearable-art-database/blob/master/lib/queries.ts", hint: "Full-text plus trigram fallback" },
-        { label: "Data pipeline", href: "https://github.com/anusirkas/wearable-art-database/tree/master/scripts", hint: "Met API and Commons harvesters" },
-        { label: "README", href: "https://github.com/anusirkas/wearable-art-database#readme", hint: "Estonian to English table map" },
+        { label: "Schema", href: "https://github.com/anusirkas/wearable-art/blob/master/db/schema.sql", hint: "21 tables, constraints, search view" },
+        { label: "Search query", href: "https://github.com/anusirkas/wearable-art/blob/master/lib/queries.ts", hint: "Full-text plus trigram fallback" },
+        { label: "Data pipeline", href: "https://github.com/anusirkas/wearable-art/tree/master/scripts", hint: "Met API and Commons harvesters" },
+        { label: "README", href: "https://github.com/anusirkas/wearable-art#readme", hint: "Estonian to English table map" },
       ],
     },
     sections: [
