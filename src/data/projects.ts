@@ -417,7 +417,7 @@ export const toolbox = [
   { group: "Front-end", items: ["TypeScript", "React", "Next.js", "Vue", "Nuxt", "HTML & CSS"] },
   { group: "Back-end & data", items: ["Node.js", "Express", "REST", "GraphQL", "MariaDB / MySQL", "PostgreSQL", "MongoDB", "PHP", "Python"] },
   { group: "Commerce", items: ["Magento", "WooCommerce", "GoERP", "Product data", "Catalogue UX"] },
-  { group: "Tools & design", items: ["Git", "Jira", "Vercel", "Render", "Cursor", "Figma", "Adobe CC"] },
+  { group: "Tools & design", items: ["Git", "Jira", "Vercel", "Render", "Cursor", "Claude", "Figma", "Adobe CC"] },
 ];
 
 export const contact = {
