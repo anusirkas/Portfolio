@@ -231,7 +231,7 @@ export const featured: FeaturedProject[] = [
     imageAlt: "Archive entrance: a McQueen feather dress behind the headline Made to be worn. Kept to be remembered.",
     links: [
       { label: "Live site", href: "https://wearable-art-archive.vercel.app/" },
-      { label: "Source", href: "https://github.com/anusirkas/wearable-art" },
+      { label: "Source", href: "https://github.com/anusirkas/wearable-art-archive" },
     ],
     entryPoints: {
       tryIt: [
@@ -241,10 +241,10 @@ export const featured: FeaturedProject[] = [
         { label: "See the data model", href: "https://wearable-art-archive.vercel.app/about", hint: "ERD and the course queries, live" },
       ],
       engineers: [
-        { label: "Schema", href: "https://github.com/anusirkas/wearable-art/blob/master/db/schema.sql", hint: "21 tables, constraints, search view" },
-        { label: "Search query", href: "https://github.com/anusirkas/wearable-art/blob/master/lib/queries.ts", hint: "Full-text plus trigram fallback" },
-        { label: "Data pipeline", href: "https://github.com/anusirkas/wearable-art/tree/master/scripts", hint: "Met API and Commons harvesters" },
-        { label: "README", href: "https://github.com/anusirkas/wearable-art#readme", hint: "Estonian to English table map" },
+        { label: "Schema", href: "https://github.com/anusirkas/wearable-art-archive/blob/master/db/schema.sql", hint: "21 tables, constraints, search view" },
+        { label: "Search query", href: "https://github.com/anusirkas/wearable-art-archive/blob/master/lib/queries.ts", hint: "Full-text plus trigram fallback" },
+        { label: "Data pipeline", href: "https://github.com/anusirkas/wearable-art-archive/tree/master/scripts", hint: "Met API and Commons harvesters" },
+        { label: "README", href: "https://github.com/anusirkas/wearable-art-archive#readme", hint: "Estonian to English table map" },
       ],
     },
     sections: [
