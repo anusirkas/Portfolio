@@ -343,8 +343,8 @@ export const archive: ArchiveProject[] = [
     stack: "React · TypeScript · Vitest",
     note: "Picks the best seats for a group on a real cabin map and explains why",
     links: [
-      { label: "Demo", href: "https://flight-seat-app.vercel.app/" },
-      { label: "Code", href: "https://github.com/anusirkas/flight-seat-app" },
+      { label: "Demo", href: "https://seatwise-flights.vercel.app/" },
+      { label: "Code", href: "https://github.com/anusirkas/seatwise-flights" },
     ],
   },
   {
