@@ -361,14 +361,16 @@ export const archive: ArchiveProject[] = [
   {
     title: "Kombucha",
     image: "/images/kombucha.webp",
-    year: "2025",
-    stack: "Figma",
-    note: "E-commerce prototype with wireframes and UI kit",
+    year: "2026",
+    stack: "Figma · TypeScript · Three.js · GLSL",
+    note: "From my Figma design to a launch page: a photo can that spins into each flavour",
     links: [
+      { label: "Demo", href: "https://freshy-kombucha.vercel.app/" },
       {
-        label: "Prototype",
+        label: "Hero",
         href: "https://www.figma.com/proto/49sBruaZKoTAve9GXSCQG1/Kombucha?node-id=16-27&starting-point-node-id=16%3A153",
       },
+      { label: "Code", href: "https://github.com/anusirkas/freshy-kombucha" },
     ],
   },
   {
